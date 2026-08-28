@@ -1,0 +1,40 @@
+{
+  "_comment": "Primary sources, curated by hand. Add or remove entries and commit; the page picks them up on the next build. 'note' is what the reader sees before deciding whether to open the link.",
+  "sources": [
+    {
+      "org": "Copernicus EMS",
+      "title": "Rapid Mapping activation EMSR927 — Flood in Nepal",
+      "url": "https://mapping.emergency.copernicus.eu/activations/EMSR927/",
+      "note": "Official activation page. Delineation and grading products for flood extent and damage assessment are published here as they are released.",
+      "date": "2026-08-26"
+    },
+    {
+      "org": "Copernicus EMS",
+      "title": "Activation notice and terms of reference",
+      "url": "https://mapping.emergency.copernicus.eu/news/flood-in-nepal-emsr927/",
+      "note": "What the service was asked to map and why, including the reported water level at the monitoring stations.",
+      "date": "2026-08-26"
+    },
+    {
+      "org": "EUSPA / Copernicus",
+      "title": "Sentinel-2 before and after the flood at Betrawati and Gerkhu",
+      "url": "https://eu-space.europa.eu/components/earth-observation-copernicus/image-of-the-day/aftermath-nepal-flash-flood",
+      "note": "Image pair from 12 and 27 August showing channel widening and the extent of the sediment deposits on the valley floor.",
+      "date": "2026-08-27"
+    },
+    {
+      "org": "AGU / Eos — The Landslide Blog",
+      "title": "The 26 August 2026 catastrophic debris flow in Nepal and Tibet",
+      "url": "https://eos.org/thelandslideblog/26-august-2026-nepal-and-tibet",
+      "note": "First analysis to pin the source area from satellite imagery, and the argument that the seismic signal is the avalanche rather than a tectonic trigger.",
+      "date": "2026-08-26"
+    },
+    {
+      "org": "Humanitarian OpenStreetMap Team",
+      "title": "Nepal Floods 2026 — mapping activation and data index",
+      "url": "https://wiki.openstreetmap.org/wiki/Organised_Editing/Activities/Nepal_Floods_2026",
+      "note": "Index of the open response datasets: UNOSAT flood extent, Disasters Charter activation, released Planet and Maxar imagery, OpenAerialMap scenes.",
+      "date": "2026-08-27"
+    }
+  ]
+}
