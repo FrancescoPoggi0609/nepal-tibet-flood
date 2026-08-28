@@ -287,6 +287,20 @@
     <ol class="feed" id="secfeed"></ol>
   </section>
 
+  <section class="social" id="eodata">
+    <h2>Satellite data over the AOI</h2>
+    <p>
+      The Copernicus Browser, opened on the bounding box above with the collection and the
+      August–September 2026 window already set. Sentinel-1 is the one that matters here — the valley
+      was under monsoon cloud for days after the event, so the optical record is patchy and the
+      radar record is not.
+    </p>
+    <div class="btnrow" id="eolinks"></div>
+    <p class="secnote" style="margin-top:16px">
+      Both links open on the AOI centre. Browsing needs no account; downloading full products does.
+    </p>
+  </section>
+
   <section class="social">
     <h2>On LinkedIn</h2>
     <p>
@@ -317,7 +331,10 @@
   <footer>
     <p>
       AOI extent: 27.8145°–28.4688° N, 84.9688°–85.7104° E (WGS 84). Source area of the detachment
-      from satellite imagery, 28.2765° N 85.5194° E. Elevations marked "~" are approximate.
+      from satellite imagery, 28.2765° N 85.5194° E. Elevations marked "~" are approximate:
+      Rasuwagadhi in particular is estimated from its position upstream of Timure, not taken from a
+      published figure. Kyirong Town sits on the Kyirong Tsangpo, the other headwater branch,
+      which joins the Lhende near Rasuwagadhi.
       Primary sources are curated by hand and supplemented from the
       <a href="https://reliefweb.int/" target="_blank" rel="noopener">ReliefWeb</a> archive of UN OCHA
       and from <a href="https://www.gdeltproject.org/" target="_blank" rel="noopener">the GDELT Project</a>
@@ -341,37 +358,43 @@
   var PER_POINT    = 6;           // keyword-matched links inside each map popup
   var POINT_FILL   = 4;           // extra recent items added when matches run short
 
+  // path:true  -> vertex on the Lhende / Bhote Koshi / Trishuli flow line
+  // path:false -> affected location on a different branch
   var POINTS = [
-    { id:"src",  name:"Detachment source area", where:"Upper Lhende Khola catchment",
-      lat:28.2765, lng:85.5194, alt:"~5,200 m", origin:true,
+    { id:"src", name:"Detachment source area", where:"Upper Lhende Khola catchment",
+      lat:28.2765, lng:85.5194, alt_m:5200, approx:true, origin:true, path:true,
       note:"A terminal section of the glacier broke away and fell more than a kilometre to the valley floor, entraining rock and sediment.",
-      keys:["glacier","glacial","collapse","avalanche","usgs","seismic","cause","caused","trigger","what happened"] },
+      keys:["glacier","glacial","collapse","avalanche","usgs","seismic","cause","caused","trigger","lhende"] },
 
-    { id:"gyi",  name:"Gyirong / Kyirong port", where:"Gyirong County, Xizang (China)",
-      lat:28.3933, lng:85.3292, alt:"2,774 m",
-      note:"Border crossing struck by the mudflow, with damage to roads, power supply and communication links.",
-      keys:["gyirong","kyirong","jilong","tibet","xizang","china","chinese","port","border"] },
+    { id:"gyi", name:"Kyirong (Gyirong) Town", where:"Gyirong County, Xizang (China)",
+      lat:28.3933, lng:85.3292, alt_m:2774, approx:false, path:false,
+      note:"On the Kyirong Tsangpo, the other headwater branch, which joins the Lhende near Rasuwagadhi. The border port facility struck by the mudflow lies further south, at the frontier itself.",
+      keys:["gyirong","kyirong","jilong","tibet","xizang","china","chinese","port","customs"] },
 
-    { id:"tim",  name:"Timure", where:"Rasuwa district (Nepal)",
-      lat:28.2537, lng:85.3665, alt:"~1,900 m",
-      note:"Settlement on the Bhote Koshi just downstream of the border, inside the corridor swept by the flood wave.",
+    { id:"ras", name:"Rasuwagadhi and Miteri bridge", where:"Nepal\u2013China border",
+      lat:28.2778, lng:85.3778, alt_m:1950, approx:true, path:true,
+      note:"Confluence of the two headwater branches and site of the border crossing. Reference point used to estimate how far upstream the channel was blocked.",
+      keys:["rasuwagadhi","rasuwa","miteri","bridge","border","crossing","port","customs"] },
+
+    { id:"tim", name:"Timure", where:"Rasuwa district (Nepal)",
+      lat:28.2537, lng:85.3665, alt_m:1900, approx:false, path:true,
+      note:"Roughly 3 km downstream of the border crossing, inside the corridor swept by the flood wave.",
       keys:["timure","rasuwa"] },
 
-    { id:"ras",  name:"Rasuwagadhi and Miteri bridge", where:"Nepal–China border",
-      lat:28.2778, lng:85.3778, alt:"~1,800 m",
-      note:"Crossing and river bridge at the border, used as the reference point for estimating how far upstream the channel was blocked.",
-      keys:["rasuwagadhi","rasuwa","miteri","bridge","border","crossing"] },
+    { id:"sya", name:"Syabrubesi", where:"Rasuwa district (Nepal)",
+      lat:28.1635, lng:85.3363, alt_m:1440, approx:true, path:true,
+      note:"Valley floor documented by before-and-after satellite imagery of the event.",
+      keys:["syaphru","shyaphru","syabru","satellite","imagery","planet","before and after"] },
 
-    { id:"sya",  name:"Syaphrubesi", where:"Rasuwa district (Nepal)",
-      lat:28.1635, lng:85.3363, alt:"~1,460 m",
-      note:"Trishuli valley floor documented by before-and-after satellite imagery of the event.",
-      keys:["syaphru","shyaphru","syabru","satellite","planet","imagery","before and after"] },
-
-    { id:"tri",  name:"Trishuli Bazaar and Bidur", where:"Nuwakot district (Nepal)",
-      lat:27.8900, lng:85.1597, alt:"~600 m",
+    { id:"tri", name:"Trishuli Bazaar and Bidur", where:"Nuwakot district (Nepal)",
+      lat:27.8900, lng:85.1597, alt_m:600, approx:true, path:true,
       note:"Furthest downstream reach shown here: the Trishuli rose rapidly, sweeping away houses and vehicles.",
-      keys:["trishuli","nuwakot","bidur","downstream"] }
+      keys:["trishuli","nuwakot","bidur","betrawati","downstream"] }
   ];
+
+  function altLabel(p){
+    return (p.approx ? "~" : "") + p.alt_m.toLocaleString("en-US") + " m";
+  }
 
   /* ============ 2. Map ============ */
 
@@ -421,9 +444,10 @@
     if(more.length){
       body += '<p class="phead sep">Wider event material</p>'+linkList(more);
     }
+    var meta = esc(p.where)+' · '+altLabel(p)+' · '+
+               p.lat.toFixed(4)+'&deg;N '+p.lng.toFixed(4)+'&deg;E';
     return '<h3>'+esc(p.name)+'</h3>'+
-           '<p class="meta">'+esc(p.where)+' · '+esc(p.alt)+' · '+
-             p.lat.toFixed(4)+'&deg;N '+p.lng.toFixed(4)+'&deg;E</p>'+
+           '<p class="meta">'+meta+'</p>'+
            '<p class="note">'+esc(p.note)+'</p>'+
            '<div class="plinks">'+body+'</div>';
   }
@@ -431,12 +455,12 @@
   /* ============ 3. Elevation rail ============ */
 
   var railEl = document.getElementById("rail");
-  POINTS.forEach(function(p){
+  POINTS.slice().sort(function(a,b){ return b.alt_m-a.alt_m; }).forEach(function(p){
     var li = document.createElement("li");
     var b  = document.createElement("button");
     b.type = "button";
     b.className = "stop" + (p.origin?" origin":"");
-    b.innerHTML = '<span class="alt mono">'+esc(p.alt)+'</span>'+
+    b.innerHTML = '<span class="alt mono">'+altLabel(p)+'</span>'+
                   '<span class="body"><span class="name">'+esc(p.name)+'</span><br>'+
                   '<span class="where">'+esc(p.where)+'</span></span>';
     b.addEventListener("click",function(){
@@ -545,6 +569,42 @@
 
   refresh();
   setInterval(refresh, 60*60*1000);   // hourly refresh
+
+  /* ============ 5. Copernicus Data Space links ============ */
+
+  var C_LAT = (AOI.south+AOI.north)/2, C_LNG = (AOI.west+AOI.east)/2;
+  var FROM = "2026-08-01", TO = "2026-09-30";
+
+  // Copernicus Browser collection identifiers.
+  // S2 confirmed from the CDSE documentation. S1 not documented anywhere I could
+  // find: to get the exact string, open the browser, pick Sentinel-1 in the left
+  // panel, and read datasetId= from the address bar. Then replace the value below.
+  var DS_S2 = "S2_L2A_CDAS";
+  var DS_S1 = "S1_CDAS_IW_VVVH";
+
+  function browserLink(dataset){
+    var u = "https://browser.dataspace.copernicus.eu/?zoom=10"+
+            "&lat="+C_LAT.toFixed(4)+"&lng="+C_LNG.toFixed(4)+
+            "&themeId=DEFAULT-THEME"+
+            "&fromTime="+FROM+"T00:00:00.000Z"+
+            "&toTime="+TO+"T23:59:59.999Z"+
+            "&dateMode=RANGE";
+    if(dataset) u += "&datasetId="+dataset;
+    return u;
+  }
+
+  var EO = [
+    ["Sentinel-1", browserLink(DS_S1)],
+    ["Sentinel-2", browserLink(DS_S2)]
+  ];
+  var eoEl = document.getElementById("eolinks");
+  EO.forEach(function(pair){
+    var a = document.createElement("a");
+    a.className = "btn"; a.href = pair[1];
+    a.target = "_blank"; a.rel = "noopener";
+    a.textContent = pair[0];
+    eoEl.appendChild(a);
+  });
 
   /* ============ 5. LinkedIn ============ */
 
