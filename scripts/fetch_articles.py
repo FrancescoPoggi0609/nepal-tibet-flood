@@ -16,6 +16,7 @@ import os
 import sys
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 
 OUTPUT = "articles.json"
@@ -74,12 +75,23 @@ GDELT = ("https://api.gdeltproject.org/api/v2/doc/doc"
          "&mode=ArtList&format=json&maxrecords=250&timespan=14d&sort=DateDesc")
 
 
-def get(url):
-    req = urllib.request.Request(url, headers={
-        "User-Agent": f"nepal-tibet-flood-map/3.0 (GitHub Actions; mailto:{CONTACT})"
-    })
+UA = f"nepal-tibet-flood-map/4.0 (GitHub Actions; mailto:{CONTACT})"
+
+
+def fetch_raw(url):
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=60) as r:
-        return json.loads(r.read().decode("utf-8", "replace"))
+        return r.status, r.read().decode("utf-8", "replace")
+
+
+def get(url):
+    """JSON fetch that says what came back when the response is not JSON."""
+    status, body = fetch_raw(url)
+    try:
+        return json.loads(body)
+    except json.JSONDecodeError:
+        head = " ".join(body.split())[:200]
+        raise RuntimeError(f"HTTP {status}, response was not JSON: {head}")
 
 
 def host(url):
@@ -177,18 +189,70 @@ def gdelt_split(seen):
     return inst, news
 
 
+GNEWS = ("https://news.google.com/rss/search?q=" +
+         urllib.parse.quote("Nepal flood Rasuwa OR Trishuli OR Gyirong when:14d") +
+         "&hl=en-US&gl=US&ceid=US:en")
+
+
+def google_news(seen):
+    """Fallback for the secondary list when GDELT returns nothing."""
+    try:
+        status, body = fetch_raw(GNEWS)
+        root = ET.fromstring(body)
+    except Exception as exc:
+        print(f"Google News fallback failed: {exc}", file=sys.stderr)
+        return []
+    out, per_outlet = [], {}
+    for item in root.iter("item"):
+        link = (item.findtext("link") or "").strip()
+        title = (item.findtext("title") or "").strip()
+        if not link or not title or link in seen:
+            continue
+        outlet = ""
+        src = item.find("source")
+        if src is not None:
+            outlet = (src.text or "").strip()
+        # Google appends " - Outlet" to the headline; drop it, we show it separately
+        if outlet and title.endswith(" - " + outlet):
+            title = title[: -(len(outlet) + 3)]
+        key = (outlet or link).lower()
+        if per_outlet.get(key, 0) >= PER_OUTLET:
+            continue
+        per_outlet[key] = per_outlet.get(key, 0) + 1
+        pub = (item.findtext("pubDate") or "")[5:16].strip()
+        seen.add(link)
+        out.append({"title": title, "url": link,
+                    "org": outlet or host(link), "note": "", "date": pub})
+        if len(out) >= MAX_SECONDARY:
+            break
+    return out
+
+
 def main():
     curated = load_curated()
+    if not curated:
+        print(f"WARNING: no curated entries. Is {CURATED} present in the repository?",
+              file=sys.stderr)
     seen = {s["url"] for s in curated}
 
     rw = reliefweb(seen)
     inst, news = gdelt_split(seen)
 
+    source_of_news = "gdelt"
+    if not news:
+        print("GDELT returned no general coverage; trying Google News", file=sys.stderr)
+        news = google_news(seen)
+        source_of_news = "google-news"
+
+    print(f"curated={len(curated)}  reliefweb={len(rw)}  "
+          f"allow-listed={len(inst)}  news={len(news)} (via {source_of_news})")
+
     primary = (curated + inst + rw)[:MAX_PRIMARY]
     secondary = news[:MAX_SECONDARY]
 
     if not primary and not secondary:
-        print("Nothing collected; leaving the previous file in place", file=sys.stderr)
+        print("Every source came back empty. Leaving the previous file in place.",
+              file=sys.stderr)
         return 1
 
     payload = {
