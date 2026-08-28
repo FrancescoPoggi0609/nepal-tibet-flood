@@ -306,7 +306,7 @@
       AOI extent: 27.8145°–28.4688° N, 84.9688°–85.7104° E (WGS 84). Source area of the detachment
       from satellite imagery, 28.2765° N 85.5194° E. Elevations marked "~" are approximate.
       Articles are collected automatically from <a href="https://www.gdeltproject.org/" target="_blank" rel="noopener">the GDELT Project</a>,
-      capped at two per outlet, and refreshed when the page opens and once an hour thereafter.
+      capped at two per outlet, and refreshed hourly by a scheduled job in the site repository.
       The label above each headline is assigned automatically from keywords in the title; it
       indicates the angle of the piece and is not a substitute for reading it.
       Relief <a href="https://opentopomap.org/" target="_blank" rel="noopener">OpenTopoMap</a>, data <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>.
@@ -475,10 +475,9 @@
       url:"https://4cminewswire.substack.com/p/2026-aug-26-ice-and-rock-avalanche" }
   ].map(function(a){ a.tag = tagFor(a.title); return a; });
 
-  var QUERY = '("Nepal flood" OR "Nepal floods" OR "Nepal Tibet" OR Rasuwa OR Gyirong OR ' +
-              '"Bhote Koshi" OR Trishuli OR "glacier collapse" OR "Lhende")';
-  var API = "https://api.gdeltproject.org/api/v2/doc/doc?query="+encodeURIComponent(QUERY)+
-            "&mode=ArtList&format=json&maxrecords=150&timespan=7d&sort=DateDesc";
+  // The page reads a file refreshed hourly by a GitHub Action, because GDELT
+  // does not allow the request to be made directly from the browser.
+  var FEED_URL = "articles.json";
 
   var feedEl = document.getElementById("feed");
   var statusEl = document.getElementById("status");
@@ -493,7 +492,7 @@
     return ("0"+d.getHours()).slice(-2)+":"+("0"+d.getMinutes()).slice(-2);
   }
 
-  function render(list, live){
+  function render(list, live, generated){
     feedEl.innerHTML = "";
     if(!list.length){
       feedEl.innerHTML = '<li class="empty">No articles available right now. Try again in a few minutes.</li>';
@@ -510,7 +509,7 @@
     });
     statusEl.className = live ? "" : "stale";
     statusEl.innerHTML = '<span class="dot"></span>'+
-      (live ? list.length+" articles · updated "+clock()
+      (live ? list.length+" articles · collected "+esc(generated||clock())
             : "fallback list · automatic collection unreachable");
 
     POINTS.forEach(function(p){
@@ -535,30 +534,27 @@
   }
 
   function normalize(raw){
-    var count={}, out=[];
+    var count={}, seen={}, out=[];
     (raw||[]).forEach(function(a){
       if(out.length>=MAX_ARTICLES) return;
-      if(!a.url || !a.title) return;
-      var dom=(a.domain||"").toLowerCase();
+      if(!a.url || !a.title || seen[a.url]) return;
+      var dom=(a.src||a.domain||"").toLowerCase();
       count[dom]=(count[dom]||0)+1;
       if(count[dom]>PER_OUTLET) return;
-      var when="";
-      if(a.seendate && a.seendate.length>=13){
-        when = a.seendate.slice(0,4)+"-"+a.seendate.slice(4,6)+"-"+a.seendate.slice(6,8)+
-               " "+a.seendate.slice(9,11)+":"+a.seendate.slice(11,13);
-      }
-      out.push({ title:a.title.trim(), url:a.url, src:dom, when:when, tag:tagFor(a.title) });
+      seen[a.url]=1;
+      out.push({ title:String(a.title).trim(), url:a.url, src:dom,
+                 when:a.when||"", tag:tagFor(a.title) });
     });
     return out;
   }
 
   function refresh(){
-    fetch(API,{cache:"no-store"})
+    fetch(FEED_URL+"?t="+Date.now(),{cache:"no-store"})
       .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
       .then(function(d){
         var list = normalize(d.articles);
         if(!list.length) throw new Error("empty");
-        render(list,true);
+        render(list, true, d.generated);
       })
       .catch(function(){ render(FALLBACK,false); });
   }
