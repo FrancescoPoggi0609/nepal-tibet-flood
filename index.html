@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nepal–Tibet glacier collapse and debris flow, 26 August 2026 — area of interest and alert points</title>
+
+<meta name="description" content="Area of interest for the 26 August 2026 glacier collapse on the Rasuwa–Gyirong border, with alert points along the debris flow path and a continuously updated press review.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nepal–Tibet glacier collapse and debris flow, 26 August 2026">
+<meta property="og:description" content="Area of interest, alert points along the flow path, and a press review that refreshes every hour.">
+<!-- Public URL of the page and the LinkedIn preview image -->
+<meta property="og:url" content="https://francescopoggi0609.github.io/nepal-tibet-flood/">
+<meta property="og:image" content="https://francescopoggi0609.github.io/nepal-tibet-flood/preview.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --abyss:#0A1C28;        /* glacial shadow, background */
+    --panel:#102B3B;        /* panels */
+    --panel-hi:#17394D;     /* borders, rules */
+    --ice:#E6EEF2;          /* primary text */
+    --ice-dim:#8FA9B8;      /* secondary text */
+    --melt:#5BC8D8;         /* meltwater: interactive */
+    --silt:#D9A05B;         /* silt: flow path */
+    --scar:#C64B3A;         /* scar: AOI outline */
+    --rail:72px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--abyss);
+    color:var(--ice);
+    font-family:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-variation-settings:"wdth" 100;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace}
+
+  .wrap{max-width:1240px;margin:0 auto;padding:0 20px 64px}
+
+  /* ---------- masthead ---------- */
+  header{padding:44px 0 28px;border-bottom:1px solid var(--panel-hi)}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--melt);margin:0 0 18px
+  }
+  h1{
+    font-size:clamp(30px,5.2vw,58px);
+    font-variation-settings:"wdth" 118,"wght" 700;
+    line-height:1.02;letter-spacing:-.015em;margin:0 0 22px;max-width:20ch;
+  }
+  .lede{font-size:17px;color:var(--ice-dim);max-width:64ch;margin:0 0 26px}
+  .readout{
+    display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--panel-hi);
+    border-radius:2px;overflow:hidden;max-width:790px
+  }
+  .readout div{
+    flex:1 1 155px;padding:12px 16px;border-right:1px solid var(--panel-hi);background:var(--panel)
+  }
+  .readout div:last-child{border-right:0}
+  .readout dt{
+    font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--ice-dim);margin:0 0 4px
+  }
+  .readout dd{margin:0;font-family:"IBM Plex Mono",monospace;font-size:15px;color:var(--ice)}
+
+  /* ---------- map + elevation rail ---------- */
+  .stage{display:grid;grid-template-columns:1fr 276px;gap:0;margin-top:34px;
+    border:1px solid var(--panel-hi);border-radius:2px;overflow:hidden}
+  #map{height:580px;background:var(--panel)}
+
+  .rail{background:var(--panel);border-left:1px solid var(--panel-hi);padding:20px 0;
+    display:flex;flex-direction:column}
+  .rail h2{
+    font-size:11px;font-family:"IBM Plex Mono",monospace;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ice-dim);margin:0 18px 4px;font-weight:500
+  }
+  .rail p.hint{font-size:12px;color:var(--ice-dim);margin:0 18px 16px}
+  .rail ol{list-style:none;margin:0;padding:0;flex:1;overflow-y:auto}
+  .stop{
+    position:relative;display:grid;grid-template-columns:var(--rail) 1fr;
+    align-items:start;padding:0;cursor:pointer;background:none;border:0;width:100%;
+    text-align:left;color:inherit;font:inherit;
+  }
+  .stop .alt{
+    font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ice-dim);
+    padding:11px 10px 11px 18px;text-align:right;white-space:nowrap
+  }
+  .stop .body{
+    padding:11px 18px;border-left:2px solid var(--panel-hi);position:relative;
+    transition:border-color .18s ease,background-color .18s ease
+  }
+  .stop .body::before{
+    content:"";position:absolute;left:-5px;top:17px;width:8px;height:8px;border-radius:50%;
+    background:var(--silt);box-shadow:0 0 0 3px var(--panel);transition:background-color .18s ease
+  }
+  .stop .name{font-size:14px;font-variation-settings:"wght" 600;line-height:1.3}
+  .stop .where{font-size:12px;color:var(--ice-dim)}
+  .stop:hover .body,.stop:focus-visible .body{background:#16394D;border-left-color:var(--melt)}
+  .stop:hover .body::before,.stop:focus-visible .body::before{background:var(--melt)}
+  .stop:focus-visible{outline:2px solid var(--melt);outline-offset:-2px}
+  .stop.origin .body::before{background:var(--scar);width:11px;height:11px;left:-6.5px;top:15px}
+
+  /* ---------- press review ---------- */
+  .press{margin-top:52px}
+  .press-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
+    gap:12px;border-bottom:1px solid var(--panel-hi);padding-bottom:14px;margin-bottom:8px}
+  .press-head h2{
+    font-size:clamp(22px,3vw,32px);font-variation-settings:"wdth" 115,"wght" 700;
+    margin:0;letter-spacing:-.01em
+  }
+  #status{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ice-dim)}
+  #status .dot{display:inline-block;width:7px;height:7px;border-radius:50%;
+    background:var(--melt);margin-right:7px;vertical-align:1px}
+  #status.stale .dot{background:var(--silt)}
+
+  ol.feed{list-style:none;margin:0;padding:0;counter-reset:art;
+    columns:2;column-gap:38px}
+  ol.feed li{border-bottom:1px solid var(--panel-hi);break-inside:avoid}
+  ol.feed a.item{
+    display:grid;grid-template-columns:44px 1fr;padding:16px 0;
+    text-decoration:none;color:inherit;transition:background-color .16s ease
+  }
+  ol.feed a.item:hover,ol.feed a.item:focus-visible{background:#122F41}
+  ol.feed a.item:focus-visible{outline:2px solid var(--melt);outline-offset:-2px}
+  .idx{counter-increment:art;font-family:"IBM Plex Mono",monospace;font-size:12px;
+    color:var(--ice-dim);padding-left:6px;padding-top:3px}
+  .idx::before{content:counter(art,decimal-leading-zero)}
+  .tag{
+    font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--silt);margin-bottom:5px
+  }
+  .headline{font-size:16px;font-variation-settings:"wght" 600;line-height:1.35;margin-bottom:6px}
+  ol.feed a.item:hover .headline{color:var(--melt)}
+  .src{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ice-dim)}
+  .empty{padding:26px 0;color:var(--ice-dim);font-size:15px}
+
+  /* ---------- LinkedIn panel ---------- */
+  .social{margin-top:52px;border:1px solid var(--panel-hi);border-radius:2px;background:var(--panel);
+    padding:26px 28px}
+  .social h2{font-size:20px;font-variation-settings:"wdth" 112,"wght" 700;margin:0 0 6px}
+  .social p{font-size:14px;color:var(--ice-dim);margin:0 0 18px;max-width:70ch}
+  .social ul{list-style:none;margin:0 0 20px;padding:0}
+  .social ul li{border-left:2px solid var(--panel-hi);padding-left:12px;margin-bottom:12px}
+  .social ul li a{color:var(--melt);text-decoration:none;font-size:15px;
+    font-variation-settings:"wght" 600;line-height:1.35}
+  .social ul li a:hover{text-decoration:underline}
+  .social ul li span{display:block;font-size:13px;color:var(--ice-dim)}
+  .btnrow{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{
+    display:inline-block;border:1px solid var(--melt);color:var(--melt);text-decoration:none;
+    font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    padding:10px 16px;border-radius:2px;transition:background-color .16s ease,color .16s ease
+  }
+  .btn:hover,.btn:focus-visible{background:var(--melt);color:var(--abyss)}
+
+  /* ---------- byline ---------- */
+  .byline{
+    margin-top:52px;border-top:2px solid var(--melt);background:var(--panel);
+    padding:24px 28px;display:flex;flex-wrap:wrap;gap:20px 32px;
+    align-items:flex-end;justify-content:space-between
+  }
+  .byline .eyebrow{margin-bottom:8px}
+  .byline .who{
+    margin:0 0 3px;font-size:clamp(20px,2.6vw,27px);
+    font-variation-settings:"wdth" 114,"wght" 700;letter-spacing:-.01em;line-height:1.1
+  }
+  .byline .what{margin:0;font-size:14px;color:var(--ice-dim);max-width:52ch}
+  .byline .ids{display:flex;flex-wrap:wrap;gap:10px}
+  .byline .ids a{
+    display:inline-block;border:1px solid var(--panel-hi);color:var(--melt);text-decoration:none;
+    font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;
+    padding:9px 14px;border-radius:2px;transition:border-color .16s ease,background-color .16s ease
+  }
+  .byline .ids a:hover,.byline .ids a:focus-visible{border-color:var(--melt);background:#16394D}
+
+  footer{margin-top:36px;padding-top:22px;border-top:1px solid var(--panel-hi);
+    font-size:13px;color:var(--ice-dim);max-width:80ch}
+  footer a{color:var(--melt)}
+
+  /* ---------- Leaflet popups ---------- */
+  .leaflet-popup-content-wrapper{
+    background:var(--panel);color:var(--ice);border-radius:2px;
+    border:1px solid var(--panel-hi);box-shadow:0 10px 34px rgba(0,0,0,.5)
+  }
+  .leaflet-popup-tip{background:var(--panel);border:1px solid var(--panel-hi)}
+  .leaflet-popup-content{margin:14px 16px;font-family:"Archivo",sans-serif;width:300px!important;
+    max-height:400px;overflow-y:auto}
+  .leaflet-popup-content h3{margin:0 0 2px;font-size:15px;font-variation-settings:"wght" 700}
+  .leaflet-popup-content .meta{
+    font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ice-dim);margin-bottom:9px
+  }
+  .leaflet-popup-content .note{font-size:13px;color:var(--ice-dim);margin:0 0 11px;line-height:1.45}
+  .leaflet-popup-content .plinks{border-top:1px solid var(--panel-hi);padding-top:9px}
+  .leaflet-popup-content .plinks a{
+    display:block;color:var(--melt);text-decoration:none;font-size:13px;line-height:1.35;
+    margin-bottom:8px;border-left:2px solid var(--panel-hi);padding-left:9px
+  }
+  .leaflet-popup-content .plinks a:hover{border-left-color:var(--melt);text-decoration:underline}
+  .leaflet-popup-content .phead{
+    font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ice-dim);margin:0 0 8px
+  }
+  .leaflet-popup-content .phead.sep{
+    border-top:1px solid var(--panel-hi);padding-top:10px;margin-top:12px
+  }
+  .leaflet-popup-content .plinks .psrc{
+    display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--ice-dim);margin-top:2px
+  }
+  .leaflet-popup-content .plinks .ptag{
+    display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.09em;
+    text-transform:uppercase;color:var(--silt);margin-bottom:1px
+  }
+  .leaflet-popup-close-button{color:var(--ice-dim)!important}
+  .leaflet-container{background:#0A1C28}
+  .leaflet-control-attribution{background:rgba(10,28,40,.86)!important;color:var(--ice-dim)!important;font-size:10px!important}
+  .leaflet-control-attribution a{color:var(--melt)!important}
+  .leaflet-bar a{background:var(--panel);color:var(--ice);border-bottom-color:var(--panel-hi)}
+  .leaflet-bar a:hover{background:var(--panel-hi);color:var(--ice)}
+  .leaflet-control-layers{background:var(--panel)!important;color:var(--ice);border:1px solid var(--panel-hi)!important}
+
+  @media (max-width:900px){
+    .stage{grid-template-columns:1fr}
+    #map{height:420px}
+    .rail{border-left:0;border-top:1px solid var(--panel-hi);max-height:330px}
+    ol.feed{columns:1}
+    h1{font-variation-settings:"wdth" 105,"wght" 700}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Event monitoring · Central Himalaya</p>
+    <h1>Glacier collapse and debris flow on the Rasuwa–Gyirong border</h1>
+    <p class="lede">
+      On 26 August 2026 a section of glacier detached at roughly 5,200 m and set off an ice and rock
+      avalanche in the Lhende Khola catchment. The debris temporarily dammed the channel; when the
+      blockage failed it released a flood wave down the Bhote Koshi and Trishuli rivers, on both
+      sides of the border between Nepal and the Tibet Autonomous Region.
+    </p>
+    <dl class="readout">
+      <div><dt>Local date and time</dt><dd>2026-08-26 · 08:37</dd></div>
+      <div><dt>Seismic signal</dt><dd>M 5.2 (non-tectonic)</dd></div>
+      <div><dt>Source elevation</dt><dd>~5,200 m</dd></div>
+      <div><dt>AOI extent</dt><dd>~72 × 72 km</dd></div>
+    </dl>
+  </header>
+
+  <section class="stage">
+    <div id="map" role="application" aria-label="Map of the area of interest with alert points"></div>
+    <nav class="rail" aria-label="Alert points ordered by elevation">
+      <h2>Alert points</h2>
+      <p class="hint">Ordered by descending elevation, from the source area downstream. Select a point to centre the map on it and read the linked coverage.</p>
+      <ol id="rail"></ol>
+    </nav>
+  </section>
+
+  <section class="press">
+    <div class="press-head">
+      <h2>Press review</h2>
+      <p id="status"><span class="dot"></span>Loading…</p>
+    </div>
+    <ol class="feed" id="feed"></ol>
+  </section>
+
+  <section class="social">
+    <h2>On LinkedIn</h2>
+    <p>
+      LinkedIn posts cannot be collected automatically: there is no public search API and the content
+      sits behind authentication. The links below open LinkedIn's own live search in a new tab, and
+      the list above them is curated by hand.
+    </p>
+    <ul id="curated"></ul>
+    <div class="btnrow">
+      <a class="btn" id="li-1" target="_blank" rel="noopener">Posts: Nepal flood</a>
+      <a class="btn" id="li-2" target="_blank" rel="noopener">Posts: glacier collapse</a>
+      <a class="btn" id="li-3" target="_blank" rel="noopener">Posts: Rasuwa Gyirong</a>
+    </div>
+  </section>
+
+  <section class="byline">
+    <div>
+      <p class="eyebrow">Compiled by</p>
+      <p class="who">Dr. Francesco Poggi</p>
+      <p class="what">Remote sensing, InSAR and landslide risk assessment · University of Florence</p>
+    </div>
+    <div class="ids">
+      <a href="https://www.linkedin.com/in/francesco-poggi-424900210/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://orcid.org/0009-0008-7886-872X" target="_blank" rel="noopener">ORCID 0009-0008-7886-872X</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      AOI extent: 27.8145°–28.4688° N, 84.9688°–85.7104° E (WGS 84). Source area of the detachment
+      from satellite imagery, 28.2765° N 85.5194° E. Elevations marked "~" are approximate.
+      Articles are collected automatically from <a href="https://www.gdeltproject.org/" target="_blank" rel="noopener">the GDELT Project</a>,
+      capped at two per outlet, and refreshed when the page opens and once an hour thereafter.
+      The label above each headline is assigned automatically from keywords in the title; it
+      indicates the angle of the piece and is not a substitute for reading it.
+      Relief <a href="https://opentopomap.org/" target="_blank" rel="noopener">OpenTopoMap</a>, data <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>.
+    </p>
+  </footer>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function(){
+  "use strict";
+
+  /* ============ 1. Event data ============ */
+
+  var AOI = { south:27.8145, north:28.4688, west:84.9688, east:85.7104 };
+  var MAX_ARTICLES = 24;          // total shown in the press review
+  var PER_OUTLET   = 2;           // cap per domain, so one agency can't fill the list
+  var PER_POINT    = 6;           // keyword-matched links inside each map popup
+  var POINT_FILL   = 4;           // extra recent items added when matches run short
+
+  var POINTS = [
+    { id:"src",  name:"Detachment source area", where:"Upper Lhende Khola catchment",
+      lat:28.2765, lng:85.5194, alt:"~5,200 m", origin:true,
+      note:"A terminal section of the glacier broke away and fell more than a kilometre to the valley floor, entraining rock and sediment.",
+      keys:["glacier","glacial","collapse","avalanche","usgs","seismic","cause","caused","trigger","what happened"] },
+
+    { id:"gyi",  name:"Gyirong / Kyirong port", where:"Gyirong County, Xizang (China)",
+      lat:28.3933, lng:85.3292, alt:"2,774 m",
+      note:"Border crossing struck by the mudflow, with damage to roads, power supply and communication links.",
+      keys:["gyirong","kyirong","jilong","tibet","xizang","china","chinese","port","border"] },
+
+    { id:"tim",  name:"Timure", where:"Rasuwa district (Nepal)",
+      lat:28.2537, lng:85.3665, alt:"~1,900 m",
+      note:"Settlement on the Bhote Koshi just downstream of the border, inside the corridor swept by the flood wave.",
+      keys:["timure","rasuwa"] },
+
+    { id:"ras",  name:"Rasuwagadhi and Miteri bridge", where:"Nepal–China border",
+      lat:28.2778, lng:85.3778, alt:"~1,800 m",
+      note:"Crossing and river bridge at the border, used as the reference point for estimating how far upstream the channel was blocked.",
+      keys:["rasuwagadhi","rasuwa","miteri","bridge","border","crossing"] },
+
+    { id:"sya",  name:"Syaphrubesi", where:"Rasuwa district (Nepal)",
+      lat:28.1635, lng:85.3363, alt:"~1,460 m",
+      note:"Trishuli valley floor documented by before-and-after satellite imagery of the event.",
+      keys:["syaphru","shyaphru","syabru","satellite","planet","imagery","before and after"] },
+
+    { id:"tri",  name:"Trishuli Bazaar and Bidur", where:"Nuwakot district (Nepal)",
+      lat:27.8900, lng:85.1597, alt:"~600 m",
+      note:"Furthest downstream reach shown here: the Trishuli rose rapidly, sweeping away houses and vehicles.",
+      keys:["trishuli","nuwakot","bidur","downstream"] }
+  ];
+
+  /* ============ 2. Map ============ */
+
+  var map = L.map("map",{ scrollWheelZoom:false, zoomControl:true });
+
+  var topo = L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",{
+    maxZoom:16, attribution:'&copy; OpenStreetMap, SRTM | &copy; OpenTopoMap (CC-BY-SA)'
+  });
+  var sat = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",{
+    maxZoom:17, attribution:'Imagery &copy; Esri, Maxar, Earthstar Geographics'
+  });
+  topo.addTo(map);
+  L.control.layers({ "Relief":topo, "Satellite":sat },null,{position:"topright"}).addTo(map);
+
+  var bounds = L.latLngBounds([AOI.south,AOI.west],[AOI.north,AOI.east]);
+  L.rectangle(bounds,{
+    color:"#C64B3A", weight:2, opacity:.95, fillColor:"#C64B3A", fillOpacity:.07, interactive:false
+  }).addTo(map);
+  map.fitBounds(bounds,{padding:[18,18]});
+  map.on("click",function(){ map.scrollWheelZoom.enable(); });
+
+  POINTS.forEach(function(p){
+    p.marker = L.circleMarker([p.lat,p.lng],{
+      radius: p.origin?9:7,
+      color: p.origin?"#C64B3A":"#D9A05B",
+      weight:2, fillColor:"#0A1C28", fillOpacity:.9
+    }).addTo(map);
+    p.marker.bindPopup(popupHtml(p),{maxWidth:326,minWidth:286});
+  });
+
+  function linkList(arts){
+    return arts.map(function(a){
+      return '<a href="'+esc(a.url)+'" target="_blank" rel="noopener">'+
+             '<span class="ptag">'+esc(a.tag)+'</span>'+esc(a.title)+
+             '<span class="psrc">'+esc(a.src)+'</span></a>';
+    }).join("");
+  }
+
+  function popupHtml(p){
+    var hits = p._articles || [], more = p._more || [];
+    var body;
+    if(hits.length){
+      body = '<p class="phead">Coverage naming this location</p>'+linkList(hits);
+    } else {
+      body = '<p class="note" style="margin:0 0 10px">No coverage names this location directly.</p>';
+    }
+    if(more.length){
+      body += '<p class="phead sep">Wider event coverage</p>'+linkList(more);
+    }
+    return '<h3>'+esc(p.name)+'</h3>'+
+           '<p class="meta">'+esc(p.where)+' · '+esc(p.alt)+' · '+
+             p.lat.toFixed(4)+'&deg;N '+p.lng.toFixed(4)+'&deg;E</p>'+
+           '<p class="note">'+esc(p.note)+'</p>'+
+           '<div class="plinks">'+body+'</div>';
+  }
+
+  /* ============ 3. Elevation rail ============ */
+
+  var railEl = document.getElementById("rail");
+  POINTS.forEach(function(p){
+    var li = document.createElement("li");
+    var b  = document.createElement("button");
+    b.type = "button";
+    b.className = "stop" + (p.origin?" origin":"");
+    b.innerHTML = '<span class="alt mono">'+esc(p.alt)+'</span>'+
+                  '<span class="body"><span class="name">'+esc(p.name)+'</span><br>'+
+                  '<span class="where">'+esc(p.where)+'</span></span>';
+    b.addEventListener("click",function(){
+      map.setView([p.lat,p.lng], 12, {animate:true});
+      p.marker.openPopup();
+    });
+    li.appendChild(b); railEl.appendChild(li);
+  });
+
+  /* ============ 4. Press review ============ */
+
+  // Angle labels assigned from keywords in the headline.
+  var TAGS = [
+    { tag:"Casualties and missing",     re:/\b(dead|death|toll|killed|missing|bodies|casualt|victims|survivor)/i },
+    { tag:"Cause and mechanism",        re:/\b(cause|caused|trigger|glacier|glacial|collapse|usgs|seismic|earthquake|what happened|explain)/i },
+    { tag:"Tibet side and border port",  re:/\b(tibet|xizang|gyirong|kyirong|jilong|china|chinese|port|border)/i },
+    { tag:"Foreign tourists affected",   re:/\b(tourist|foreign|pilgrim|kailash|mansarovar|trekker|stranded)/i },
+    { tag:"Rescue and relief",           re:/\b(rescue|evacuat|relief|search|army|troops|emergency|aid|helicopter)/i },
+    { tag:"Infrastructure damage",       re:/\b(bridge|road|highway|hydropower|infrastructure|power|dam|customs)/i },
+    { tag:"Glacial risk and climate",    re:/\b(glof|climate|warming|permafrost|risk|hazard|lake outburst|scientist)/i },
+    { tag:"Satellite and remote sensing",re:/\b(satellite|imagery|planet|sentinel|copernicus|drone|mapping)/i }
+  ];
+  function tagFor(t){
+    for (var i=0;i<TAGS.length;i++) if (TAGS[i].re.test(t)) return TAGS[i].tag;
+    return "Event update";
+  }
+
+  // Fallback list, so the page stays useful if the automatic collection is unreachable.
+  var FALLBACK = [
+    { title:"What happened, what caused it and who is missing", src:"aljazeera.com",
+      url:"https://www.aljazeera.com/news/2026/8/27/nepal-tibet-floods-what-happened-what-caused-them-and-who-is-missing" },
+    { title:"USGS finds the seismic signal was a glacial collapse, not an earthquake", src:"france24.com",
+      url:"https://www.france24.com/en/asia-pacific/20260826-glacier-collapse-may-have-caused-nepal-tibet-landslides-experts-say" },
+    { title:"Technical analysis of the debris flow and location of the source area", src:"eos.org",
+      url:"https://eos.org/thelandslideblog/26-august-2026-nepal-and-tibet" },
+    { title:"What a glacial collapse is and how often it happens", src:"aljazeera.com",
+      url:"https://www.aljazeera.com/features/2026/8/27/nepal-tibet-floods-what-is-a-glacial-collapse-how-common-is-it" },
+    { title:"The blockage of the Lhende Khola and its subsequent failure", src:"ibtimes.co.uk",
+      url:"https://www.ibtimes.co.uk/nepal-glacier-collapse-deadly-flood-1816480" },
+    { title:"Glacial collapse caused the seismic activity and the catastrophic flood", src:"muser.press",
+      url:"https://www.muser.press/2026/08/27/glacial-collapse-nepal-floods/" },
+    { title:"What triggered the catastrophic flood on the Nepal-Tibet border", src:"reuters via internazionale.it",
+      url:"https://www.internazionale.it/ultime-notizie-reuters/2026/08/26/what-triggered-the-catastrophic-flood-on-the-nepal-tibet-border" },
+    { title:"Glacier collapse, landslide and the release of water down the valleys", src:"earthsky.org",
+      url:"https://earthsky.org/earth/nepal-flash-flood-glacier-collapse-landslide-aug-26-2026/" },
+    { title:"Himalayan landslide triggers catastrophic flood at the border", src:"legalinsurrection.com",
+      url:"https://legalinsurrection.com/2026/08/himalayan-landslide-triggers-catastrophic-flood-at-nepal-tibet-border/" },
+    { title:"Bodies recovered as hundreds remain missing after the Bhote Koshi flood", src:"4cminewswire.substack.com",
+      url:"https://4cminewswire.substack.com/p/2026-aug-26-ice-and-rock-avalanche" }
+  ].map(function(a){ a.tag = tagFor(a.title); return a; });
+
+  var QUERY = '("Nepal flood" OR "Nepal floods" OR "Nepal Tibet" OR Rasuwa OR Gyirong OR ' +
+              '"Bhote Koshi" OR Trishuli OR "glacier collapse" OR "Lhende")';
+  var API = "https://api.gdeltproject.org/api/v2/doc/doc?query="+encodeURIComponent(QUERY)+
+            "&mode=ArtList&format=json&maxrecords=150&timespan=7d&sort=DateDesc";
+
+  var feedEl = document.getElementById("feed");
+  var statusEl = document.getElementById("status");
+
+  function esc(s){
+    return String(s==null?"":s).replace(/[&<>"']/g,function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
+    });
+  }
+  function clock(){
+    var d=new Date();
+    return ("0"+d.getHours()).slice(-2)+":"+("0"+d.getMinutes()).slice(-2);
+  }
+
+  function render(list, live){
+    feedEl.innerHTML = "";
+    if(!list.length){
+      feedEl.innerHTML = '<li class="empty">No articles available right now. Try again in a few minutes.</li>';
+    }
+    list.forEach(function(a){
+      var li=document.createElement("li");
+      li.innerHTML='<a class="item" href="'+esc(a.url)+'" target="_blank" rel="noopener">'+
+        '<span class="idx mono"></span><span>'+
+        '<span class="tag">'+esc(a.tag)+'</span>'+
+        '<span class="headline">'+esc(a.title)+'</span>'+
+        '<span class="src">'+esc(a.src)+(a.when?" · "+esc(a.when):"")+'</span>'+
+        '</span></a>';
+      feedEl.appendChild(li);
+    });
+    statusEl.className = live ? "" : "stale";
+    statusEl.innerHTML = '<span class="dot"></span>'+
+      (live ? list.length+" articles · updated "+clock()
+            : "fallback list · automatic collection unreachable");
+
+    POINTS.forEach(function(p){
+      // score by how many of the point's keywords appear, keep list order for ties
+      var scored = [];
+      list.forEach(function(a,i){
+        var hay=(a.title+" "+a.src).toLowerCase(), n=0;
+        p.keys.forEach(function(k){ if(hay.indexOf(k)>-1) n++; });
+        if(n) scored.push({a:a,n:n,i:i});
+      });
+      scored.sort(function(x,y){ return y.n-x.n || x.i-y.i; });
+      p._articles = scored.slice(0,PER_POINT).map(function(s){ return s.a; });
+
+      // top up with the most recent items not already shown for this point
+      var shown = {};
+      p._articles.forEach(function(a){ shown[a.url]=1; });
+      p._more = list.filter(function(a){ return !shown[a.url]; })
+                    .slice(0, Math.max(0, PER_POINT + POINT_FILL - p._articles.length));
+
+      p.marker.setPopupContent(popupHtml(p));
+    });
+  }
+
+  function normalize(raw){
+    var count={}, out=[];
+    (raw||[]).forEach(function(a){
+      if(out.length>=MAX_ARTICLES) return;
+      if(!a.url || !a.title) return;
+      var dom=(a.domain||"").toLowerCase();
+      count[dom]=(count[dom]||0)+1;
+      if(count[dom]>PER_OUTLET) return;
+      var when="";
+      if(a.seendate && a.seendate.length>=13){
+        when = a.seendate.slice(0,4)+"-"+a.seendate.slice(4,6)+"-"+a.seendate.slice(6,8)+
+               " "+a.seendate.slice(9,11)+":"+a.seendate.slice(11,13);
+      }
+      out.push({ title:a.title.trim(), url:a.url, src:dom, when:when, tag:tagFor(a.title) });
+    });
+    return out;
+  }
+
+  function refresh(){
+    fetch(API,{cache:"no-store"})
+      .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function(d){
+        var list = normalize(d.articles);
+        if(!list.length) throw new Error("empty");
+        render(list,true);
+      })
+      .catch(function(){ render(FALLBACK,false); });
+  }
+
+  refresh();
+  setInterval(refresh, 60*60*1000);   // hourly refresh
+
+  /* ============ 5. LinkedIn ============ */
+
+  // Paste the posts worth pointing at. Leave empty to hide the list.
+  var CURATED = [
+    // { title:"Headline of the post", by:"Author — organisation", url:"https://www.linkedin.com/posts/..." }
+  ];
+
+  var curatedEl = document.getElementById("curated");
+  if(CURATED.length){
+    CURATED.forEach(function(c){
+      var li=document.createElement("li");
+      li.innerHTML='<a href="'+esc(c.url)+'" target="_blank" rel="noopener">'+esc(c.title)+'</a>'+
+                   '<span>'+esc(c.by||"")+'</span>';
+      curatedEl.appendChild(li);
+    });
+  } else {
+    curatedEl.remove();
+  }
+
+  function liSearch(q){
+    return "https://www.linkedin.com/search/results/content/?keywords="+
+           encodeURIComponent(q)+"&sortBy=%22date_posted%22";
+  }
+  document.getElementById("li-1").href = liSearch("Nepal flood 2026");
+  document.getElementById("li-2").href = liSearch("glacier collapse Himalaya");
+  document.getElementById("li-3").href = liSearch("Rasuwa Gyirong debris flow");
+})();
+</script>
+</body>
+</html>
