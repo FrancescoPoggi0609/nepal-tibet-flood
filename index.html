@@ -142,6 +142,9 @@
   ol.feed a.item:hover .headline{color:var(--melt)}
   .src{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ice-dim)}
   .empty{padding:26px 0;color:var(--ice-dim);font-size:15px}
+  .secnote{font-size:13px;color:var(--ice-dim);margin:14px 0 4px;max-width:78ch}
+  #secstatus{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ice-dim);margin:0}
+  .note-line{font-size:13px;color:var(--ice-dim);line-height:1.45;margin-top:5px}
 
   /* ---------- LinkedIn panel ---------- */
   .social{margin-top:52px;border:1px solid var(--panel-hi);border-radius:2px;background:var(--panel);
@@ -261,17 +264,27 @@
     <div id="map" role="application" aria-label="Map of the area of interest with alert points"></div>
     <nav class="rail" aria-label="Alert points ordered by elevation">
       <h2>Alert points</h2>
-      <p class="hint">Ordered by descending elevation, from the source area downstream. Select a point to centre the map on it and read the linked coverage.</p>
+      <p class="hint">Ordered by descending elevation, from the source area downstream. Select a point to centre the map on it and read the sources linked to it.</p>
       <ol id="rail"></ol>
     </nav>
   </section>
 
   <section class="press">
     <div class="press-head">
-      <h2>Press review</h2>
+      <h2>Primary sources</h2>
       <p id="status"><span class="dot"></span>Loading…</p>
     </div>
+    <p class="secnote">Space agencies, hazard authorities and technical analyses. A curated set, plus situation reports filed with UN OCHA and anything the collector finds on an explicit allow-list of institutional domains. No general news reaches this list.</p>
     <ol class="feed" id="feed"></ol>
+  </section>
+
+  <section class="press">
+    <div class="press-head">
+      <h2>Secondary sources</h2>
+      <p id="secstatus"></p>
+    </div>
+    <p class="secnote">General news coverage, capped at two items per outlet so that a single agency wire cannot fill the list. Useful for the human account of the event; for figures and for the reconstruction of what happened, use the primary sources above.</p>
+    <ol class="feed" id="secfeed"></ol>
   </section>
 
   <section class="social">
@@ -305,10 +318,12 @@
     <p>
       AOI extent: 27.8145°–28.4688° N, 84.9688°–85.7104° E (WGS 84). Source area of the detachment
       from satellite imagery, 28.2765° N 85.5194° E. Elevations marked "~" are approximate.
-      Articles are collected automatically from <a href="https://www.gdeltproject.org/" target="_blank" rel="noopener">the GDELT Project</a>,
-      capped at two per outlet, and refreshed hourly by a scheduled job in the site repository.
-      The label above each headline is assigned automatically from keywords in the title; it
-      indicates the angle of the piece and is not a substitute for reading it.
+      Primary sources are curated by hand and supplemented from the
+      <a href="https://reliefweb.int/" target="_blank" rel="noopener">ReliefWeb</a> archive of UN OCHA
+      and from <a href="https://www.gdeltproject.org/" target="_blank" rel="noopener">the GDELT Project</a>
+      under an allow-list restricted to space agencies, hazard authorities and scientific bodies.
+      Secondary sources come from the same news index without that restriction, capped at two per outlet.
+      Both lists are refreshed hourly by a scheduled job in the site repository.
       Relief <a href="https://opentopomap.org/" target="_blank" rel="noopener">OpenTopoMap</a>, data <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>.
     </p>
   </footer>
@@ -323,8 +338,6 @@
   /* ============ 1. Event data ============ */
 
   var AOI = { south:27.8145, north:28.4688, west:84.9688, east:85.7104 };
-  var MAX_ARTICLES = 24;          // total shown in the press review
-  var PER_OUTLET   = 2;           // cap per domain, so one agency can't fill the list
   var PER_POINT    = 6;           // keyword-matched links inside each map popup
   var POINT_FILL   = 4;           // extra recent items added when matches run short
 
@@ -392,8 +405,8 @@
   function linkList(arts){
     return arts.map(function(a){
       return '<a href="'+esc(a.url)+'" target="_blank" rel="noopener">'+
-             '<span class="ptag">'+esc(a.tag)+'</span>'+esc(a.title)+
-             '<span class="psrc">'+esc(a.src)+'</span></a>';
+             '<span class="ptag">'+esc(a.org||"")+'</span>'+esc(a.title)+
+             (a.date ? '<span class="psrc">'+esc(a.date)+'</span>' : '')+'</a>';
     }).join("");
   }
 
@@ -401,12 +414,12 @@
     var hits = p._articles || [], more = p._more || [];
     var body;
     if(hits.length){
-      body = '<p class="phead">Coverage naming this location</p>'+linkList(hits);
+      body = '<p class="phead">Sources naming this location</p>'+linkList(hits);
     } else {
-      body = '<p class="note" style="margin:0 0 10px">No coverage names this location directly.</p>';
+      body = '<p class="note" style="margin:0 0 10px">No source names this location directly.</p>';
     }
     if(more.length){
-      body += '<p class="phead sep">Wider event coverage</p>'+linkList(more);
+      body += '<p class="phead sep">Wider event material</p>'+linkList(more);
     }
     return '<h3>'+esc(p.name)+'</h3>'+
            '<p class="meta">'+esc(p.where)+' · '+esc(p.alt)+' · '+
@@ -435,128 +448,99 @@
 
   /* ============ 4. Press review ============ */
 
-  // Angle labels assigned from keywords in the headline.
-  var TAGS = [
-    { tag:"Casualties and missing",     re:/\b(dead|death|toll|killed|missing|bodies|casualt|victims|survivor)/i },
-    { tag:"Cause and mechanism",        re:/\b(cause|caused|trigger|glacier|glacial|collapse|usgs|seismic|earthquake|what happened|explain)/i },
-    { tag:"Tibet side and border port",  re:/\b(tibet|xizang|gyirong|kyirong|jilong|china|chinese|port|border)/i },
-    { tag:"Foreign tourists affected",   re:/\b(tourist|foreign|pilgrim|kailash|mansarovar|trekker|stranded)/i },
-    { tag:"Rescue and relief",           re:/\b(rescue|evacuat|relief|search|army|troops|emergency|aid|helicopter)/i },
-    { tag:"Infrastructure damage",       re:/\b(bridge|road|highway|hydropower|infrastructure|power|dam|customs)/i },
-    { tag:"Glacial risk and climate",    re:/\b(glof|climate|warming|permafrost|risk|hazard|lake outburst|scientist)/i },
-    { tag:"Satellite and remote sensing",re:/\b(satellite|imagery|planet|sentinel|copernicus|drone|mapping)/i }
-  ];
-  function tagFor(t){
-    for (var i=0;i<TAGS.length;i++) if (TAGS[i].re.test(t)) return TAGS[i].tag;
-    return "Event update";
-  }
-
-  // Fallback list, so the page stays useful if the automatic collection is unreachable.
-  var FALLBACK = [
-    { title:"What happened, what caused it and who is missing", src:"aljazeera.com",
-      url:"https://www.aljazeera.com/news/2026/8/27/nepal-tibet-floods-what-happened-what-caused-them-and-who-is-missing" },
-    { title:"USGS finds the seismic signal was a glacial collapse, not an earthquake", src:"france24.com",
-      url:"https://www.france24.com/en/asia-pacific/20260826-glacier-collapse-may-have-caused-nepal-tibet-landslides-experts-say" },
-    { title:"Technical analysis of the debris flow and location of the source area", src:"eos.org",
-      url:"https://eos.org/thelandslideblog/26-august-2026-nepal-and-tibet" },
-    { title:"What a glacial collapse is and how often it happens", src:"aljazeera.com",
-      url:"https://www.aljazeera.com/features/2026/8/27/nepal-tibet-floods-what-is-a-glacial-collapse-how-common-is-it" },
-    { title:"The blockage of the Lhende Khola and its subsequent failure", src:"ibtimes.co.uk",
-      url:"https://www.ibtimes.co.uk/nepal-glacier-collapse-deadly-flood-1816480" },
-    { title:"Glacial collapse caused the seismic activity and the catastrophic flood", src:"muser.press",
-      url:"https://www.muser.press/2026/08/27/glacial-collapse-nepal-floods/" },
-    { title:"What triggered the catastrophic flood on the Nepal-Tibet border", src:"reuters via internazionale.it",
-      url:"https://www.internazionale.it/ultime-notizie-reuters/2026/08/26/what-triggered-the-catastrophic-flood-on-the-nepal-tibet-border" },
-    { title:"Glacier collapse, landslide and the release of water down the valleys", src:"earthsky.org",
-      url:"https://earthsky.org/earth/nepal-flash-flood-glacier-collapse-landslide-aug-26-2026/" },
-    { title:"Himalayan landslide triggers catastrophic flood at the border", src:"legalinsurrection.com",
-      url:"https://legalinsurrection.com/2026/08/himalayan-landslide-triggers-catastrophic-flood-at-nepal-tibet-border/" },
-    { title:"Bodies recovered as hundreds remain missing after the Bhote Koshi flood", src:"4cminewswire.substack.com",
-      url:"https://4cminewswire.substack.com/p/2026-aug-26-ice-and-rock-avalanche" }
-  ].map(function(a){ a.tag = tagFor(a.title); return a; });
-
-  // The page reads a file refreshed hourly by a GitHub Action, because GDELT
-  // does not allow the request to be made directly from the browser.
+  // The page reads a file rebuilt hourly by a GitHub Action, because neither
+  // API allows the request to be made directly from the browser.
   var FEED_URL = "articles.json";
 
-  var feedEl = document.getElementById("feed");
-  var statusEl = document.getElementById("status");
+  // Curated set shown if the collector has not run yet or the file is missing.
+  var FALLBACK = [
+    { org:"Copernicus EMS", title:"Rapid Mapping activation EMSR927 \u2014 Flood in Nepal",
+      url:"https://mapping.emergency.copernicus.eu/activations/EMSR927/", date:"2026-08-26",
+      note:"Official activation page. Delineation and grading products are published here as they are released." },
+    { org:"EUSPA / Copernicus", title:"Sentinel-2 before and after the flood at Betrawati and Gerkhu",
+      url:"https://eu-space.europa.eu/components/earth-observation-copernicus/image-of-the-day/aftermath-nepal-flash-flood",
+      date:"2026-08-27",
+      note:"Image pair from 12 and 27 August showing channel widening and the extent of the sediment deposits." },
+    { org:"AGU / Eos \u2014 The Landslide Blog", title:"The 26 August 2026 catastrophic debris flow in Nepal and Tibet",
+      url:"https://eos.org/thelandslideblog/26-august-2026-nepal-and-tibet", date:"2026-08-26",
+      note:"First analysis to pin the source area from satellite imagery." },
+    { org:"Humanitarian OpenStreetMap Team", title:"Nepal Floods 2026 \u2014 mapping activation and data index",
+      url:"https://wiki.openstreetmap.org/wiki/Organised_Editing/Activities/Nepal_Floods_2026", date:"2026-08-27",
+      note:"Index of the open response datasets: UNOSAT flood extent, Disasters Charter activation, released imagery." }
+  ];
+
+  var feedEl    = document.getElementById("feed");
+  var secEl     = document.getElementById("secfeed");
+  var statusEl  = document.getElementById("status");
+  var secStatEl = document.getElementById("secstatus");
 
   function esc(s){
     return String(s==null?"":s).replace(/[&<>"']/g,function(c){
       return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
     });
   }
-  function clock(){
-    var d=new Date();
-    return ("0"+d.getHours()).slice(-2)+":"+("0"+d.getMinutes()).slice(-2);
-  }
 
-  function render(list, live, generated){
-    feedEl.innerHTML = "";
-    if(!list.length){
-      feedEl.innerHTML = '<li class="empty">No articles available right now. Try again in a few minutes.</li>';
+  function renderList(el, items, emptyMsg){
+    el.innerHTML = "";
+    if(!items.length){
+      el.innerHTML = '<li class="empty">'+esc(emptyMsg)+'</li>';
+      return;
     }
-    list.forEach(function(a){
+    items.forEach(function(a){
       var li=document.createElement("li");
       li.innerHTML='<a class="item" href="'+esc(a.url)+'" target="_blank" rel="noopener">'+
         '<span class="idx mono"></span><span>'+
-        '<span class="tag">'+esc(a.tag)+'</span>'+
+        '<span class="tag">'+esc(a.org||"")+'</span>'+
         '<span class="headline">'+esc(a.title)+'</span>'+
-        '<span class="src">'+esc(a.src)+(a.when?" · "+esc(a.when):"")+'</span>'+
+        (a.note ? '<span class="note-line">'+esc(a.note)+'</span>' : '')+
+        (a.date ? '<span class="src">'+esc(a.date)+'</span>' : '')+
         '</span></a>';
-      feedEl.appendChild(li);
+      el.appendChild(li);
     });
-    statusEl.className = live ? "" : "stale";
-    statusEl.innerHTML = '<span class="dot"></span>'+
-      (live ? list.length+" articles · collected "+esc(generated||clock())
-            : "fallback list · automatic collection unreachable");
+  }
 
+  function spread(list){
     POINTS.forEach(function(p){
-      // score by how many of the point's keywords appear, keep list order for ties
       var scored = [];
       list.forEach(function(a,i){
-        var hay=(a.title+" "+a.src).toLowerCase(), n=0;
+        var hay=((a.title||"")+" "+(a.note||"")+" "+(a.org||"")).toLowerCase(), n=0;
         p.keys.forEach(function(k){ if(hay.indexOf(k)>-1) n++; });
         if(n) scored.push({a:a,n:n,i:i});
       });
       scored.sort(function(x,y){ return y.n-x.n || x.i-y.i; });
       p._articles = scored.slice(0,PER_POINT).map(function(s){ return s.a; });
-
-      // top up with the most recent items not already shown for this point
-      var shown = {};
-      p._articles.forEach(function(a){ shown[a.url]=1; });
+      var shown={}; p._articles.forEach(function(a){ shown[a.url]=1; });
       p._more = list.filter(function(a){ return !shown[a.url]; })
                     .slice(0, Math.max(0, PER_POINT + POINT_FILL - p._articles.length));
-
       p.marker.setPopupContent(popupHtml(p));
     });
-  }
-
-  function normalize(raw){
-    var count={}, seen={}, out=[];
-    (raw||[]).forEach(function(a){
-      if(out.length>=MAX_ARTICLES) return;
-      if(!a.url || !a.title || seen[a.url]) return;
-      var dom=(a.src||a.domain||"").toLowerCase();
-      count[dom]=(count[dom]||0)+1;
-      if(count[dom]>PER_OUTLET) return;
-      seen[a.url]=1;
-      out.push({ title:String(a.title).trim(), url:a.url, src:dom,
-                 when:a.when||"", tag:tagFor(a.title) });
-    });
-    return out;
   }
 
   function refresh(){
     fetch(FEED_URL+"?t="+Date.now(),{cache:"no-store"})
       .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
       .then(function(d){
-        var list = normalize(d.articles);
-        if(!list.length) throw new Error("empty");
-        render(list, true, d.generated);
+        var primary = d.primary || [], secondary = d.secondary || [];
+        if(!primary.length && !secondary.length) throw new Error("empty");
+
+        renderList(feedEl, primary, "No primary sources available right now.");
+        statusEl.className = "";
+        statusEl.innerHTML = '<span class="dot"></span>'+primary.length+
+                             " sources \u00b7 collected "+esc(d.generated||"");
+
+        renderList(secEl, secondary, "No general coverage available right now.");
+        secStatEl.textContent = secondary.length ? secondary.length+" items" : "";
+
+        spread(primary.concat(secondary));
       })
-      .catch(function(){ render(FALLBACK,false); });
+      .catch(function(){
+        renderList(feedEl, FALLBACK, "No primary sources available right now.");
+        statusEl.className = "stale";
+        statusEl.innerHTML = '<span class="dot"></span>curated set \u00b7 collector has not run yet';
+        renderList(secEl, [], "General coverage unavailable until the collector runs.");
+        secStatEl.textContent = "";
+        spread(FALLBACK);
+      });
   }
 
   refresh();
