@@ -1,150 +1,41 @@
 {
- "generated": "2026-08-28 10:02 UTC",
- "count": 24,
- "articles": [
+ "generated": "2026-08-28 10:33 UTC",
+ "primary": [
   {
-   "title": "Update : Xi chairs CPC leadership meeting on Gyirong County mudslide rescue efforts",
-   "url": "http://www.beijingbulletin.com/news/279270645/update-xi-chairs-cpc-leadership-meeting-on-gyirong-county-mudslide-rescue-efforts",
-   "src": "beijingbulletin.com",
-   "when": "2026-08-28 09:30"
+   "title": "Rapid Mapping activation EMSR927 — Flood in Nepal",
+   "url": "https://mapping.emergency.copernicus.eu/activations/EMSR927/",
+   "org": "Copernicus EMS",
+   "note": "Official activation page. Delineation and grading products for flood extent and damage assessment are published here as they are released.",
+   "date": "2026-08-26"
   },
   {
-   "title": "एनआरएनएका पूर्वअध्यक्ष शर्माद्वारा प्रधानमन्त्री दैवीप्रकोप उद्धार कोषमा २५ लाख सहयोग | Nepal first 24 - hour updated news portal",
-   "url": "https://www.ratopati.com/story/588116/former-nrna-president-sharma-donates-rs-25-million-to-prime-ministers-disaster-relief-fund",
-   "src": "ratopati.com",
-   "when": "2026-08-28 09:30"
+   "title": "Activation notice and terms of reference",
+   "url": "https://mapping.emergency.copernicus.eu/news/flood-in-nepal-emsr927/",
+   "org": "Copernicus EMS",
+   "note": "What the service was asked to map and why, including the reported water level at the monitoring stations.",
+   "date": "2026-08-26"
   },
   {
-   "title": "Satellite Images Reveal Massive Bedrock and Glacier Collapse Behind Deadly Nepal - China Border Floods",
-   "url": "https://gulfnews.com/world/asia/satellite-images-show-bedrock-and-glacier-collapsed-on-nepal-china-border-then-rivers-flooded-1.500654908",
-   "src": "gulfnews.com",
-   "when": "2026-08-28 09:30"
+   "title": "Sentinel-2 before and after the flood at Betrawati and Gerkhu",
+   "url": "https://eu-space.europa.eu/components/earth-observation-copernicus/image-of-the-day/aftermath-nepal-flash-flood",
+   "org": "EUSPA / Copernicus",
+   "note": "Image pair from 12 and 27 August showing channel widening and the extent of the sediment deposits on the valley floor.",
+   "date": "2026-08-27"
   },
   {
-   "title": "Traje potraga za nestalima u Nepalu , pukla brana . Objavljena snimka spašavanja",
-   "url": "https://www.index.hr/vijesti/clanak/u-nepalu-najmanje-469-mrtvih/2828520.aspx?index_tid=1136832&index_ref=naslovnica_vijesti_ostalo_d_0",
-   "src": "index.hr",
-   "when": "2026-08-28 09:30"
+   "title": "The 26 August 2026 catastrophic debris flow in Nepal and Tibet",
+   "url": "https://eos.org/thelandslideblog/26-august-2026-nepal-and-tibet",
+   "org": "AGU / Eos — The Landslide Blog",
+   "note": "First analysis to pin the source area from satellite imagery, and the argument that the seismic signal is the avalanche rather than a tectonic trigger.",
+   "date": "2026-08-26"
   },
   {
-   "title": "गण्डकी प्रदेश सरकारले बाढी पीडितलाई ४ करोड सहयोग गर्ने | Nepal first 24 - hour updated news portal",
-   "url": "https://www.ratopati.com/story/588137/gandaki-province-government-to-provide-rs-40-million-assistance-to-flood-victims",
-   "src": "ratopati.com",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "Nepal - China - India need to strengthen coordination : Former Nepal Environment Minister Madhav Prasad calls for better communication to meet climate change challenge in region",
-   "url": "http://www.shanghainews.net/news/279270664/nepal-china-india-need-to-strengthen-coordination-former-nepal-environment-minister-madhav-prasad-calls-for-better-communication-to-meet-climate-change-challenge-in-region",
-   "src": "shanghainews.net",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "Наводнение в Непале и Китае : почему остановили поиски , какие есть риски , каковы масштабы",
-   "url": "https://iz.ru/2156610/2026-08-28/v-nepale-ostanovili-spasatelnuiu-operatciiu-iz-za-riska-novoi-ugrozy-chto-pishut-smi",
-   "src": "iz.ru",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "Nepal floods death toll climbs to 469 as rescue teams recover more bodies",
-   "url": "https://www.mid-day.com/news/world-news/article/nepal-floods-death-toll-climbs-to-469-as-rescue-teams-recover-bodies-across-eight-districts-23647114",
-   "src": "mid-day.com",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "Nepal orders rescuers to safety as overflow brings new flood risks",
-   "url": "https://www.freemalaysiatoday.com/category/world/2026/08/28/nepal-orders-rescuers-to-safety-as-overflow-brings-new-flood-risks",
-   "src": "freemalaysiatoday.com",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "Bihar flood situation stabilising , no trouble with water levels now : CM Samrat Choudhary",
-   "url": "http://www.beijingbulletin.com/news/279270331/bihar-flood-situation-stabilising-no-trouble-with-water-levels-now-cm-samrat-choudhary",
-   "src": "beijingbulletin.com",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "Update : Xi chairs CPC leadership meeting on Gyirong County mudslide rescue efforts",
-   "url": "http://www.japanherald.com/news/279270645/update-xi-chairs-cpc-leadership-meeting-on-gyirong-county-mudslide-rescue-efforts",
-   "src": "japanherald.com",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "10 giây định mệnh giúp nhóm người thoát chết thần kỳ trong lũ quét ở Nepal",
-   "url": "https://dantri.com.vn/the-gioi/10-giay-dinh-menh-giup-nhom-nguoi-thoat-chet-than-ky-trong-lu-quet-o-nepal-20260828150113450.htm",
-   "src": "dantri.com.vn",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "The Latest : Rescuers search for hundreds still missing in area of Nepal - China border disaster",
-   "url": "http://www.idahopress.com/ap_news/us/the-latest-rescuers-search-for-hundreds-still-missing-in-area-of-nepal-china-border-disaster/article_37b5fa60-68c1-58fc-9079-d9e4eba1ee15.html",
-   "src": "idahopress.com",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "Nepal PM convenes Cabinet meeting to discuss Rasuwa flood damage ; Army rescues 2 from hydropower tunnel",
-   "url": "http://www.australiannews.net/news/279270887/nepal-pm-convenes-cabinet-meeting-to-discuss-rasuwa-flood-damage-army-rescues-2-from-hydropower-tunnel",
-   "src": "australiannews.net",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "Traje potraga za nestalima u Nepalu , pukla brana . Objavljena snimka spašavanja",
-   "url": "https://www.index.hr/vijesti/clanak/u-nepalu-najmanje-469-mrtvih/2828520.aspx?index_tid=1136832&index_ref=naslovnica_vijesti_najcitanije_d",
-   "src": "index.hr",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "Nepal PM convenes Cabinet meeting to discuss Rasuwa flood damage ; Army rescues 2 from hydropower tunnel",
-   "url": "http://www.japanherald.com/news/279270887/nepal-pm-convenes-cabinet-meeting-to-discuss-rasuwa-flood-damage-army-rescues-2-from-hydropower-tunnel",
-   "src": "japanherald.com",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "The Latest : Rescuers search for hundreds still missing in area of Nepal - China border disaster",
-   "url": "https://www.news4jax.com/news/world/2026/08/28/the-latest-rescuers-search-for-hundreds-still-missing-in-area-of-nepal-china-border-disaster/",
-   "src": "news4jax.com",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "Rescuers urged to remain on high alert after dam bursts banks again in Nepal",
-   "url": "https://www.guardian-series.co.uk/news/national/26503168.rescuers-urged-remain-high-alert-dam-bursts-banks-nepal/",
-   "src": "guardian-series.co.uk",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "直击西藏吉隆泥石流灾害四大关切 | 頭條",
-   "url": "https://www.hkcna.hk/docDetail.jsp?id=101407092&channel=2803",
-   "src": "hkcna.hk",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "Heartbreak for Aussies as Nepal braces for more floods",
-   "url": "https://www.southernhighlandnews.com.au/story/9339027/heartbreak-for-aussies-as-nepal-braces-for-more-floods/",
-   "src": "southernhighlandnews.com.au",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "Death toll rises in Nepal disaster as lake poses new flood threat – NBC 5 Dallas - Fort Worth",
-   "url": "https://www.nbcdfw.com/news/national-international/death-toll-rises-in-nepal-china-border-disaster-as-lake-poses-new-flood-threat/4069350/",
-   "src": "nbcdfw.com",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "Nepal faces secondary flash flood threat as debris forms dam : ICIMOD cryosphere specialist",
-   "url": "https://economictimes.indiatimes.com/news/international/world-news/nepal-faces-secondary-flash-flood-threat-as-debris-forms-dam-icimod-cryosphere-specialist/articleshow/133587662.cms",
-   "src": "economictimes.indiatimes.com",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "5 . 1 magnitude earthquake hits Sichuan in China , fresh flood alert in Nepal",
-   "url": "http://www.australiannews.net/news/279270880/51-magnitude-earthquake-hits-sichuan-in-china-fresh-flood-alert-in-nepal",
-   "src": "australiannews.net",
-   "when": "2026-08-28 09:30"
-  },
-  {
-   "title": "Rescuers urged to remain on high alert after dam bursts banks again in Nepal",
-   "url": "https://www.keighleynews.co.uk/news/national/26503168.rescuers-urged-remain-high-alert-dam-bursts-banks-nepal/",
-   "src": "keighleynews.co.uk",
-   "when": "2026-08-28 09:30"
+   "title": "Nepal Floods 2026 — mapping activation and data index",
+   "url": "https://wiki.openstreetmap.org/wiki/Organised_Editing/Activities/Nepal_Floods_2026",
+   "org": "Humanitarian OpenStreetMap Team",
+   "note": "Index of the open response datasets: UNOSAT flood extent, Disasters Charter activation, released Planet and Maxar imagery, OpenAerialMap scenes.",
+   "date": "2026-08-27"
   }
- ]
+ ],
+ "secondary": []
 }
