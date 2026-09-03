@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-03 16:31 UTC",
+ "generated": "2026-09-03 19:54 UTC",
  "primary": [
   {
    "title": "Rapid Mapping activation EMSR927 — Flood in Nepal",
@@ -39,25 +39,95 @@
  ],
  "secondary": [
   {
-   "title": "Nepal floods: The remote Nepal-China border crossing at the heart of a Himalayan tragedy",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1SQS1Ta2pWZjdrQ0cxQ3Y4eDYxYk1sVXA4d0NaUXhrVFM3UVNDc2ROUGxsUmo1cEtaT0lGTDU5TF9STkhIamdLWGJiSy1HaE8wSk10UW5pN0VrQQ?oc=5",
+   "title": "Shock and devastation remain, a day after Himalayan flood disaster",
+   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1wdHZqSzNKVzJWdExOWGtlV2hjSFVCaGZ0WTU4Qkg3LU9UY0ZrOWN6bHdBc0tyeXNCVHVPcWxES3k5Z1FFNlVUOGkwcHVoZTlITS10UEN4Zw?oc=5",
+   "org": "UN News",
+   "note": "",
+   "date": "27 Aug 2026"
+  },
+  {
+   "title": "Nearly 1,000 are missing in Nepal and Tibet after floods caused by a glacial collapse",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE4wSzdOdmhIZ2RSTEtQSEpDMnVQbU5iQ1gxUkVMNUdJUS1KbDl4ZDc2Z21aaHNpUXFwWWxvcUdQTXMtbFR3YXFKbUtIS2sxNWRaUmV0NlJ3NkxYY3BvQUoweVM0WmlDV3NRNmo1LW9B?oc=5",
+   "org": "NPR",
+   "note": "",
+   "date": "26 Aug 2026"
+  },
+  {
+   "title": "Hundreds missing and scores dead as flash flood hits Nepal-Tibet border",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE14WnFXZ08wMzRJTVdFU2E0RER2b1Eyc0FpWXNvazlWYlJRdW1oSDcwRVJkbjc3QWFqVDFZejh4aWpaTGVUakRrQzNQMUxfU085Q0FqbG9ndnIxQQ?oc=5",
    "org": "BBC",
    "note": "",
-   "date": "01 Sep 2026"
+   "date": "27 Aug 2026"
+  },
+  {
+   "title": "A Cascading Disaster on the China–Nepal Border: What to Know About the August 2026 Rasuwa Flood, 72 Hours Later",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQS2hEOVJzWDRUV2hEaEdsS3YwSFRaQjFLeHdYdXRzaVFxT3ZNaXc5LUpHRkE1Z2wxNEhpcUtLYXE3cTJMX001czZzRG5vTFk3aHNWT19TTHhjQUtjZ3VkQzFRZjVDeG1vZE5LRHNiQnB2UFhLM0hvaWdWT0FOZmktZFpqdGlFUzNLMVB6UUV6Y05iZXV1d1NIa2NiRDdvbGdKc2lNSjNxaEdDMlpsYUsxaTl4Qkw3YzB4M29VVmF0QWFRZw?oc=5",
+   "org": "Stimson Center",
+   "note": "",
+   "date": "26 Aug 2026"
+  },
+  {
+   "title": "Scale of Flood Disaster Grows as Authorities Say 2,400 Are Missing",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE84SXhPcHdJYlVSNHFudlhObU9acHZ4QVdqSnQ4TU5IUHRhUG4ySVdOTW1iR0VvZjFxcWFCNUswT2dyQ2xyQlpKM21UdkEycTlPXzdYdzdxb3ROQmNsLTlqTTFWX0pOVVhRYVMyNjVEWkJkbEptSlU0V2xR?oc=5",
+   "org": "The New York Times",
+   "note": "",
+   "date": "30 Aug 2026"
+  },
+  {
+   "title": "Hundreds missing after flood hits Nepal-Tibet border, 157 bodies recovered",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNV3BfVDlBclVpS3ZLU2V4Zm1qa0tGTWlKbEJ1c1Q1RmlNRGZSYm5jMEhnSXNCN21QQS1UcnFzTjlYc250d0JjT1N5NmVHT1gwclVNWU05M2xNaUhXRVU1T1NOcVNldHRBcEtBZWk5LWNwclBrVlNJVG9oR21yYkJFYVMxXzlLQVpOZFFfNlN5RWhvNVhZR1YyTldmN25NX2JrUjFZZzZISDduVEI0ZDNGcXdLS2U?oc=5",
+   "org": "NBC News",
+   "note": "",
+   "date": "26 Aug 2026"
+  },
+  {
+   "title": "Chinese rescue team finds 'nothing but ruins' at flood-hit Himalayan border crossing",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQNTU5TmV6N2N0dHN6Q293S0JVZjRwbGtkQ2lyV1ZpTUt0eTBTNDJvVkI1Qk5mTWFlM25yOUFQVG1VQWZqbjhrLVNRQU81UjBhakxqRmlETF9rVDNCUm4zUzVrY1dTaWlsMkoxeGpHYUREcjJvdldPX2hTTk5HVlU3anBIbGlQMlpuODB4OUdDNmJVSUdCeHQwZmMzd3pVRDFSRVFxeTBpWU9fZWh2NEhtbFJhT0pwUVE?oc=5",
+   "org": "Reuters",
+   "note": "",
+   "date": "29 Aug 2026"
   },
   {
    "title": "Hundreds missing, including 47 Americans, in deadly Nepal floods, local officials say",
    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNFFKbWhSWTR5S25UT01SQnE4V1Jua044M19rZmJiYzRwRHphTU1GdFBIUi1ORXl2UUF1Y0NzNG00cDVuNzZuZzFjQ0doUTF5VUg1elRPdE02V0UxNFB1U1dub1ZrMnpjR190bnJIV2VWN0ZPbTRucURXYTlkQWlHS2d0XzR4dzgxaGdCWk92OE9paV92VWIzdTlYNE5xQThPNWRzR2N3R0hjUdIBrwFBVV95cUxNYjM2dnl3U1htTjMxc1ctcjBITTVMMXlXQlFCTjNPV2cxOXF6U3BmU2xSZHZRdHI1QTJRYTB6T1kyVVJ0Y2s3UlZQUm1ZS210UUozM0F3M09Sbk1QWU9pTXVwdjBNT3lGRkhnM0NGZU5ha1BuVDJ1R1hKbVR1M0REMkVMdFpZYnhDb2RUdlNSMVpQbHEwUXV5WGxSMFp1ci16M2dzVGhnQlNpTlVHZ3Qw?oc=5",
    "org": "ABC News - Breaking News, Latest News and Videos",
    "note": "",
-   "date": "02 Sep 2026"
+   "date": "26 Aug 2026"
   },
   {
-   "title": "Nepal's hesitance to accept foreign help for flood relief comes under scrutiny",
-   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9UVlk2VmxjcUNNOHUyY21pSlM4eTVFY0VWc0F1RjVROVJWX1Fqbm5ITjlkVTFKZVk4LUhZOHFEcmpLQ2o5aFBDR3pZcmJLdGc2UWF4ZGlfTHdNY0hSaHNCcUZwWU03N1ZSdzhRdXRrdHRYUXhVNjV2WjdzVXo?oc=5",
+   "title": "Rescuers search for survivors after Nepal–China floods kill at least 165",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaE9PTDMzYVczRlZBcXVsZjQyTFJ2cnVrckV2SXBQLXdiVzh5QjhFcjdpOHJaY0NHRF91VDVlaHN0SDJvZHh4ZW42OGpoUlAwQUlxOW5IU0lMVTFvSEduZVhPZ1F6V2psM1ZaeXZjelk0LUNiSVVXQ1diT3M1UHJJR08xUGVVSmh4TUptNGxHRjdfRjBUSG9oSDE0bkc1WTZOaDdHZ24yQWs1YUxBR01uT0dranRxZ9IBuwFBVV95cUxPenBMYnlBVVV3eDZQVlVYRm82QnQ4TlhiejBWZlVFaEV2akxjMXFBNXFabjhqejdHaFpUcXA5QXcwZWlHU1pwNXVBRHdWRDVkMEg1VlFfV2pWZG1nTWtsa05JemVuYWpoRWFqNVFPcmFQYURtalRRMmJjZVdvLWdoRnFsSXNPXzNGLWdDd1Z1dUgzNVJZUmNvamlPaENDZF9INHNKTnhBaW94YVlBOU1Nd3NzTU0zeU1Sa29N?oc=5",
+   "org": "Al Jazeera",
+   "note": "",
+   "date": "26 Aug 2026"
+  },
+  {
+   "title": "Flash Flood Devastates China-Nepal Border Region",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQVWp4UDZVbDhpSW5GbWNGU3pSQWFPamRfejJVOXpRZ0p3Wl9VOFBzTHROaHpqS2FVcEdYRG9hcFNYM245T2F5QlVnYWpHVDg2dkdNRXlHekNwN1lIdERSODRRVjBTczhTUWl6NmEyUHQ4aFFQSTdDdktmT1h5dmpHSmQxeXFyY2RJ?oc=5",
+   "org": "The Diplomat – Asia-Pacific",
+   "note": "",
+   "date": "26 Aug 2026"
+  },
+  {
+   "title": "Nepal flood rescue efforts intensify as death toll rises, with more than 2,000 people still missing",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9BeEtpdkJfM0c5OUQ3ZHd0Zk5MdFFYNElOc2tZU1huYVZCQ1hrM2d6aC04b1dpMnJjS2d3Ml91WG1HaHlza0Q4bnFZa3IzdTFFc09RWUVhb05kVXp0aDlVNElQNjNoWHA3ekVWWEhMN09jdHM4a0E?oc=5",
+   "org": "CBS News",
+   "note": "",
+   "date": "28 Aug 2026"
+  },
+  {
+   "title": "A week after the deadly floods in Nepal, rescuers work to find survivors",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPd01naHoxejRBdWxCemR3OHpINDNiWFI2MlB4Nm1HN3BURy11cXg3U25BUlM4YXhYY3F2MGk3S0ozV2ZDSVFVQ3lZMGFfdE5EY2VfV1hlWE1NcGRJeWdhV0VOT205M0tIbFE1alhsUGRzSTlnS2tSb0I5QlhTSVdYRVVTcnBPclpYVGx6T1g5NXEyMDJMaGZWdThpaUZnZDI4OG8xdHNIWEhMWWxLSEFRM0hwMVMyQWF4Wm1UUHpjdnM0dw?oc=5",
    "org": "NPR",
    "note": "",
-   "date": "31 Aug 2026"
+   "date": "01 Sep 2026"
+  },
+  {
+   "title": "Satellite images show destruction from Nepal-Tibet floods",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxORktfYnozNXJoZFZRUkZ1aUduNFVFYTVBY0JUel9sdTJsR3lqZW9pcHlPblgzSm5LX0ZKeXl3eW01WmdQbzRULU50MTB6TmhwMnJZUC1mQWEtajhHb19JVDJRNlZWYmd3Y1dWeDVkN0wyNjI4SE13RFI4aEd3dllhWjVvcWw2dzVQVzI2TWoyVU42ZGktMERMOWNfakQwbXfSAaQBQVVfeXFMT0IyVXkxWmlyVkxGMUVMcmk3TFRBMjh1d3Ruc2VLeUF2UGZvalVwMnRwaFRmLUMwck5vSnMyN2dEeno0S2NTZzljTUd0cjd2bnNHTGgza3JWSEdPMTMtN1NyUDV4X2p0d3pPVU5vUS1Hc0RBaEhCQnItaXF4TmN4eXRSQS0yNi1udXBUMnp5Z1FCbDM4SHpDRDBadVpJNzZvWC0zZzE?oc=5",
+   "org": "Al Jazeera",
+   "note": "",
+   "date": "27 Aug 2026"
   },
   {
    "title": "Hundreds missing after flood hits Nepal-Tibet border, 157 bodies recovered",
@@ -67,18 +137,39 @@
    "date": "26 Aug 2026"
   },
   {
-   "title": "August 2026 Nepal Trishuli Flood",
-   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE92QXNKenRWV3BEVmlCX2RDOFZzM1lJYTE3TXFPTGN3ZDlTb0s2Y2JvSGJGSTRjUlFRYkV0bE1mZFBxcDgxLXZnczFES1lVWEdEaTVBd1JFR1AxR3RhS2xzMk8wUHhDLWY0c0pIT0lSeFEtaTBjRnFDTQ?oc=5",
-   "org": "ArcGIS StoryMaps",
+   "title": "Death toll tops 1,000 after Nepal flooding, as search continues for thousands",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPWkphcU1qbVc1STUyRmc0UXZlRTdETW1wb2k3d0VuN0pRUmJWRW5QZEpnWGZNT1ZFNG1mRHZTcXJlUjVuU1NxSnM5ZGxWSnhxTktOa2d3M08xXzdadm9ZbFNTZnh2OTJfbG9VWHA5UVp6OEwwd01qWm52WE5tUWg3VGZTUFh3RnhWVGpKelVtZk1IOTctbGdZV2xVVHg3ekROV3cw0gGoAUFVX3lxTE5DM1lxXzJaTDZFWWt2ajNTWGVWeUt4S3ByS1NMbFl1aVR4U3U3VE11ZFV2d05wY25pdnlhTFk0bTQzV0UzQXZyWTJSWE14SDNWVHRRdUo4VF9JY2NRaUVFSmdTbkNFaFZLc1J5YlVqLXhQX253c09XNm9wOG9xNzJvRF9HcmYzMjlZc1k0YkQ1dUV5c0xEdUxsWFBnMWdfSFZ0dU1VWGxJUA?oc=5",
+   "org": "ABC News - Breaking News, Latest News and Videos",
+   "note": "",
+   "date": "01 Sep 2026"
+  },
+  {
+   "title": "Pilgrims at Border Crossing Are Among 500 Foreigners Missing After Flood",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUEgtUFRaVnMzOWdEM2U3UlRoUWowRUtiOFNheTdtLVZESmVKZ3FOZGVzRTdkRlhCOHBDUjllVWtPWDZacmZxbGw2OHlOV3YtUEhMRkJUNm5aNnYzTUNwdlc5V3ZMQVBFOUVYakRrbWhKUFZjZ2Z6MHY5VWxoZ20ybzZ5Z0RjX3h3T25GV1ZGWm1MVGt0TDlNeVNhdVAwLVBka2o2R09DTGM?oc=5",
+   "org": "The New York Times",
    "note": "",
    "date": "27 Aug 2026"
   },
   {
+   "title": "Video. Nepal flash flood: dramatic footage shows Rasuwa valley engulfed",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPUk1OLU1DM2t4ekxteExJdzgtZW05am96OGp2Nk10elVpbUFXb2JWb3FKLWsteE1sOVZRQlZSOGYxR1VNd3A0ZnNKN1lqS0IwaWJuWEh3QnlVaGNUS2NTeEF0QzFRNzA1VnJFQi1STGp4b1ZrR0Y3WGc2bERsTlZZem1EVW5FdW9ZeWh0bHdDNzRIckNOVkt5aDV1eW50WlQxTlcxNVBPdHc?oc=5",
+   "org": "Euronews.com",
+   "note": "",
+   "date": "01 Sep 2026"
+  },
+  {
    "title": "Deadly Flash Flooding Hits Nepal",
    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE53N1RhZGlYTnEyV0N2S09MVlp6ODVpYUZpYW1UZEtjRjVoTmFDVWp0QmRHSDAxeEQ4UjZOd21DNFZ5eGtlZF9nNFd2aUNjRklCUVV3NlZMMmRCRlR1NjhEV3pGcXFQREp1NkczYlMtZW5sN2JV?oc=5",
-   "org": "unicef usa",
+   "org": "unicefusa.org",
    "note": "",
    "date": "26 Aug 2026"
+  },
+  {
+   "title": "Devastating before-and-after satellite photos show Nepal flood destruction",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQLVpwQUJyTEtnSHpNWlB0TmFhTDZlV05tbDk1N29YYTFZRWhKbk1fYWVvUE1uWExidkEwTmdpNXZmZGdiS1kxLVB3bzB4YlVNUFpiLXhBZXZWRS1rbEZHY2Y5M0U3RFd0MkxiMGRjTlo5M2hETzlnSUltUXplME9KM0NLTHY3RlV0QUVhc2RsbXltNU1YMjFhc0l4dmRXcFpVaFNmS1VBRnQ0NWVkSWp5TTdWVHM4aWwtYjZxVnFPOEdOUQ?oc=5",
+   "org": "Los Angeles Times",
+   "note": "",
+   "date": "27 Aug 2026"
   },
   {
    "title": "How China buried Tibet flood images after Nepal disaster",
@@ -86,97 +177,6 @@
    "org": "dw.com",
    "note": "",
    "date": "31 Aug 2026"
-  },
-  {
-   "title": "They were building infrastructure in Nepal. Their families in China want to know what happened to them",
-   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOdnozNjB0cDRmbGdnQ2N0N3hqVjNhT25BQ0lwaElSTzlZN09WMEhUbkVScFoxNGFjcTZQSjJ5RDdhbVJ5X0dUZ054WlFtSkNRTTZWelYtWVE0REtrRmxUN292anVOaWtvYXVoMnJEZkJKNldpNEhTYWpTdXVNSXdETEYxdDJ0U3RmSXFrQmd3?oc=5",
-   "org": "CNN",
-   "note": "",
-   "date": "01 Sep 2026"
-  },
-  {
-   "title": "After the flood: human suffering on an unfathomable scale in Nepal’s worst-hit districts",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPTHpFdE5OaHVhTGFpX2FRZGxlOXg3RnFkbG5RZXNhSElEWlhDdW95V1c3UFBoczlnWUFqYzRwRzU3UVlTeExJR2F5T0pMeWUtMTIxOUxVaDgwNnNhLURTTi1tZzI2QXlUMElWM3ZBN29TNWRhSmpZWFY5QVdrOVFiR3cwYnEtU0FjNUxWZVdZN2dDTWloMDlfYlp1YXgyZVN5MVJQRkJR?oc=5",
-   "org": "The Guardian",
-   "note": "",
-   "date": "02 Sep 2026"
-  },
-  {
-   "title": "China-Nepal floods: first research shows no one could have outrun debris flow",
-   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQeklOZmhXd0pFZUc2QnVkdTNNX0RIbjJXOGlabTVKRHN3RGVXWkhES0xRWUE5WXNSNjJrUTJQNVVBRWR5XzhTQ3hnOHF1UENPajJzV2hQX095M2I3VFh5YTRMZ3VkUmFqc2d4LXlRWDE5QWx4djFQeC1sdU9PLUNESHdoSkU4RVNlclJwTmowTndORmFESFlfQlhjYy1sNmxhaVEwTmFPc0ZleWNVZ1BIazhFaVlqYlZHem82OHNPaGJUQkpBNHdwdVhSa0zSAcwBQVVfeXFMUERYcGw2SnZMQXNNSWV4NC16WnB3ZUVPSFdTYk1SdDBSTk9jdUEtWE1icDIwRmpwcE85cXYzcDY0bVBJN3dsT3FFMGxrcFNUMHZjdDR5a01OUXY4YU9HYzhreWJjTjdYN3h0T0JCYWQwaHVRSWxGR1IxU3IwaEpReUZGQ0pHV1Bxd2FsTWMxX2h1M1Z1SFlfcWNhQ1ZsSlB6UW5IUFNkbUNuQTVMQS1DM2R5MTN3S2lMM3BQbEVFT1g2c1VBMWQwcWl3VDlV?oc=5",
-   "org": "South China Morning Post",
-   "note": "",
-   "date": "01 Sep 2026"
-  },
-  {
-   "title": "Washington Post. . The Nepali Army rescued more than 300 workers and residents trapped inside a hydropower tunnel after flooding hit the Rasuwa district. More than 100 others remain trapped.",
-   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNRVB5aDBJMnpPUGk0SUNZRVY0Y29IeFpEZHJHc1p4VHY2Zjlld3lraEVxdVlld1RadjlYcTN1ZmE5ZkF6LXc1MGtYZktrUWRIYXpyaTc3NW9jRTdjR2NaRHZvSndqNE5ZT0VYeGRiMWt1czJiUHhkVFBzTXU2eVphQnc2ZTJQZ0NUcTlyRFhvc3FONUplU2VRZm16TTV2V1V3dUJrWGZodW5xeVFJamxhczlzaFM0dnlRaEdBMEVZN0VZOEZQ?oc=5",
-   "org": "facebook.com",
-   "note": "",
-   "date": "02 Sep 2026"
-  },
-  {
-   "title": "In Nepal's Tragedy, a Warning for a Warming World",
-   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQOVpMQmk0WU5QbFRGN1puQlFMTHlPVGtzY2xnejgyVUlRRjlaQ3FucDhKbExBNDl1b3pFaVg2YjNZb2tUU3draXFXd1Z3aWZVOE51SjhZbE9STWhvYldvS0EtdGtnVTBVbC1ad1IyM0JNOGpVR01LaktGalo5OE40V3podkJFdWZuSVBlc1FuOA?oc=5",
-   "org": "Time Magazine",
-   "note": "",
-   "date": "01 Sep 2026"
-  },
-  {
-   "title": "Deadly Nepal flood caused by enormous landslide, glacier tumble: Scientist",
-   "url": "https://news.google.com/rss/articles/CBMiqxBBVV95cUxNOWFmZGxfNkdwXy13YUpwdzlYclVJOXF1c1Zobm5vV3ZRdTFRYVkxMFdNWTM1NWlGRDBmd1dxXzZIQVJiZjBPSk1GcHlhMVVKd3oyTkFhNk5TeUZCdFRnWmo2eXJuRmUzZ1VJRC1BbE9YOXNCTHlBeEZBWnJFM2dFcHZOWGE5eElkMm4xQTA1U0RQS3JQWTRIUXlsWm1VX01hTFdoeWVhNWFDbml4N3NDX1NyZ0thWEpTazJCRV8tUEgzRkE2QUZZbG42OHFOdkx1TTdaRWF3UGpCZlYwendodFd6NXhRc1BWdDNTSmU0ZUxoenFxamlEMmhNZUdJRkliLTl2c0ptaVZFSkJSOG5PT1N5bXpxVU5CWlNvX2J0Y0pXRWFXNWlod3NORk8xYmx4WGpxc2pqUnlRdmNLVmRZa1J5TTZjZ0g1S0x0NjBQUDRXQnQtMElQeHVuemVXSFNaeUVKOE0ydGNIVGE1Z2JEMWJMNkRTX2lIYWhEcVNYa1lVNG0wdm9meGhhaWlMajBteU9jallKWU0wR2RHeEx0SmZ3aGdvS082cklMeDZpd3V4aFg2ZjBzWXd4VnV0T016MEpVN1dBbkZab0tKNFlPLVFMaEREalJCc0l5TzNDNy1fblVUbjNudnNWYndzVjZQY0YxSms2S0pnd25aQ2xmbW5wd2EwZ1c2VVI1MGRjNWFOUUtPZHd1WHpzaWtpS1c0UWg3ZVJRTElRaThjNDNnN2ZJN21YSFFvdklyUnphd2cxVUZXSnFHbWRob1k3N1J2NlVJalBWWlNkLUxHY2pLeWFjcXBYUG1LQTRIOXVhNVVYVUJ6clYwRHlweGY2RDFQZWl2WXlUbG1yYU9zV0FlYnMwWmJuUGxnaWF3N3oya3E3aGc5SlBCSDdCcnF6VUh0enNSNXI4dHhONl9mblZBS1c4bjduNzJtOFZlSmdkdkJ1UWpTTlY3eWlXemE5Mk1IZEg0a3JlSGlOMGVwM2V5YkZIaHh4aWkyRmhqSTIwNndELV9KbGlDVjRqV0JHR1VmU0pNaGVlcGZNdWtpQVhJa0xUU0p5ZURQS0h2a0loT3M5REhrOU9kc1RudG1yT0c3eFFtLW05Ul9WOElaMVp1SnJ2M2dUMkZheGdaV1ptNWtFX1hUbEFUUnUxQnIyc0xuaVhReFpyWmZDSjJjenRuSDk2TkRVYWlsdEpMU2pXYXRrazF2c2pWdVdPSmJOQmpWVDZHb2psVjlYY0ZIbDBIMThmYnBIaU5hQzIyb3lzeGJCX1l4Mm5IZ2Jncm9OelNJZ0hsTS1uTjlEN1RtZWtaYlBmNVJpSFN5WjJYQVlCUEMybGxVcEllNXNuRS1MekMtRTNwQkNTS1VsSlZvNmZoLVEzWjFYRC1mTmZEVzZYZFd1N2lvaTdfMFExZW9xUVRKTHVNd0NvMV9HVVRSbVpJRGthbGh4MzdYTlYwSTRLQjZZMm5DWXFOWHNqTXFKTmJHcVVvMkZ1WmpnRHliUUx5ZDdGTXVfcmc1YWdCT01HRDg2VTF1Qm9ZS3VNV21UWmk1SXZhZ0dOZWt1b25JdldaY25jd1ZKckx2ZnRSMDNmU1JmNWlKblZoMXJud2dDY3UteVhxOWJPYjA4NXFMWV8xU0F1MWV1di1UQTFrcUdHRGI1bHVyTHZvNjNiN2VkNGdvVFlPQkFDLVh4dE5xcVR2Tm04cDFrQ0VxbWZaUjM1QnNhTFhWRDVtQW5DSXdRZHQyUzdUUmkyNVprdFdWOTlqaExFVE9FNmQ2TWxLcXhGWHdpdmx1eEVFMDk4TTB0NWhySHFfeVhOQlZPRGRURXFkamFfZ0dZS2FJLU9mQmJ0T3dfMkdvNHdDdHBQQ3RwRUpacGZsWURwbENxZ2k3XzJqMnh2YXVTN2xRdF8yR1BVWFRRczljSDhzaGYzM2dCLTFrbk9rNnNycTRRNVB1b1RuWWFZRGU5d3hEdnJNSC0xclMxOGpjaFhmLXlHQjhTRDVrRzlHdHE5MVRQYWhCMHJvWHJlVE1ScnJnV014azJlc0cyQWt1V1plZXdfQW9lc3IycVVhcVZUeGJZS0hCaEg4OGdwYU94Wll4VnZHTVA5Q2pJOERKMkFlOG5lQWxPNzVoY0E1dThwNVBqLXF0UFJJWE4xQ3hVa0EwaUoyU1pFeHlyOXdkNXQ2MnQ0V2FwZXpRWHZzY0ZMVUE0SENnbGNRVVB5c0oxSzlGN0NpR3lkMUp4aU9kb2FuS0Vla1BZMl9fTjBKZkYwR0RYeGFTX1JtdjFPOFdBQmRJRE52T3hUOURFeHJUTzBfbFJpSkt4Mm04dlZvUTlIcG1HWFNXQVlsQmNGWkdKb20yWG5NMWVsZ3N6UURPYVFwQ2FBdzJienE1VHhnd2dXUmYwcFd0OTdZb2d5TEZMNVRQajM2LVMxVUJQbnhQX2hiUmw4dWtGX0t6NmxqZTBVa083RjFoYmNJcHhfUnVUODVXSlBjUHVQcWtUVDNnZWphejhJU0tKNV9YWGRUV09fdU1VMUxXaktIMzhidTV4Q29hbWRFVVZxZThOQ2F4R1ByRm1OeTN5YzNFWlRWN3BzTW5ZNUtjZjAxNTdlNWI1aW52enBtcmN0TndUN2E3VnZYS3Z4dm5xSzVYWTYxb0xqaUNVSEFfZ3pFYy0tcGk3X1hxbFI0aXZ6SUtGRDdST3pEdXljWS1BMmZYTlZURkZSaXR3c1IyNTUtN2FMVTVpaEFyQkN5ZWhkbGo5OU55LVhfeEpNNjBRQzBYU0Y2bGx1NEJQNVE?oc=5",
-   "org": "ABC7 Los Angeles",
-   "note": "",
-   "date": "26 Aug 2026"
-  },
-  {
-   "title": "Nepal floods leave 22,000 children without safe water: UNICEF",
-   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE04RGhiS3ZXdTVjb1hqNkE3WkI2MlpjQVdNekN6b251YUNLZy1yc0FKUy1YWE0tWnFvWEl3b2lfMGpMLTUwNVBRX0xMa3hZVlIzQ3FsMk1Eaw?oc=5",
-   "org": "UN News",
-   "note": "",
-   "date": "03 Sep 2026"
-  },
-  {
-   "title": "Nepal-China flood deaths cross 900",
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPeVZ5UjlrVXlqbnk4T09LX2NRVUt3X3Nna1lhTF9tajBOMHRLa3BVeWg4MjNfTDA5Z2JVOWQ1SkdJQmFGMXdBUHU0akp4TGdRLXFMRmdFcG4ybm9FUU9FOEJSdS1TdGxsUG9LZFAxaHhQMktibFdRa1JJWnJjemlGam1HSThram4tdnlkS3d2ckFwU0c3dnQ0UDByVjE?oc=5",
-   "org": "Spectrum News",
-   "note": "",
-   "date": "31 Aug 2026"
-  },
-  {
-   "title": "This news segment documents the human and physical toll of recent floods in Dhunge Bazaar, Nepal. Survivor Sitaram Shah shares his personal tragedy, having lost his home and family members, and expresses despair over his heavy debts. DW correspond",
-   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNUlFiSDlaMmxJdzVIeGY0ekEwUE1hdldKdjlVcHVhODI0MFUyWlFDb2pJd0YzV1VhUzZUckhnUjRxdXZDYTZ0MXhDVGZvc3RQckdycGs2aVVIWUFjRHZmTGk2eDc1WGVQS1pzYWNyU1ZIbnZvUkFzSTUzblBpM1Vmemp6ZnhOMENCSnQ1MzF1anpoUUNrb3h6akdsbHV2MG5xR3ozdEJWQXN3OXQ2YWtBTFFfZ0RIcFNhcDNLSjZfd3FFLVhiOVVLby1HMVhVWW5VcmVQTzc1R1F6N3hyR0kyRlJn?oc=5",
-   "org": "facebook.com",
-   "note": "",
-   "date": "01 Sep 2026"
-  },
-  {
-   "title": "Nepal rescuers race to reach any survivors trapped in tunnels a week after disaster",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxObnNFSE15OEdqaFZ4TkZ5TFFyWjZVMldBWmpxYWFFSDdnRVdDejlGN1VZdF9YWDVWYzZ4UDNKLW5Od2Y0X0tZOWFTbHE5QklNTm45TXozWXpoRTRyQlVJVzlWT3Y1RzBlVS01S3lDRWFOT1Q5R1ltMXBhejRHemg1UEpJdUJyYmE1b0lMd3lCWHFjR21XOFFaai1zOGd2Z2h6VHRFZlBZdzhzeWRnUURfb3o5Q2dnTU5sTC1xOA?oc=5",
-   "org": "Reuters",
-   "note": "",
-   "date": "02 Sep 2026"
-  },
-  {
-   "title": "Nepal floods death toll climbs to 1,252 as rescue efforts continue",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOVWFTX1I2V2NMaFgyc21qV2h3YWE1MWZNWjd1TjBGOGlBVTdNR2pKb0t1QlJYUkllWUw5anhpbXd2SXpzTVFNMC1kVktsS1JpbGljUndFakY3bzFsVVExNmxYRkZRcDVCXzlhTGhGVXdxcUlJd3VOaks1SE5kc2IyaHZIWXFwdlM2elFqcUlJQUFoc3Z5Q21ybmdDLTJielBSMjQwNi1B0gGrAUFVX3lxTE1aRnFaNzhlcXpzR29jQXJrVzZUX3QzNE80VlpSWFVqUXh0eXcxUlBDNkkxTnYyTm82N0tQTzlidEs2d09IS3oyWHlaOXFzVFcxS1pWMUdDdHMtdUJJTFA1WmRCdnl2cDd6cGs1c3E3V1pnZUN5Z1BzVXExcHhCV0o0cm9OOGNDaEFQLW95WmRuOEVybmY1UnI5SVU0UkxVY3RyVXN5VzNSN2dibw?oc=5",
-   "org": "ABC News - Breaking News, Latest News and Videos",
-   "note": "",
-   "date": "03 Sep 2026"
-  },
-  {
-   "title": "Chinese crews rebuild road near Nepali border after devastating floods",
-   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNnppa0xRcVFUeWhNUW1aVVMzVDRBNjkyUFB3VEsxTVNfa3RtQVVMZjA0SllpU1ZEaW40bHdGQmVfSU0xeFFVTVA1djJSaXBzQmhoQ08xTFVWZFR2cGg3OHh5X3JWajJFYTJPWHhZbjF1UldWODdvZGp6MkVHajAwSkY0RDAtb2FRZUt4MVFtRGdZLWtU?oc=5",
-   "org": "CNN",
-   "note": "",
-   "date": "31 Aug 2026"
-  },
-  {
-   "title": "Nepal floods: Father borrows $13, walks for days to search for missing son",
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRDV3cG5rQXNTaUV0M0JPUDFUN0hTaVFVcHhGWXQ2TmlielZtRUlqRXdrel90ZkZkOG04VUgzRWpTdXZaOXJxdEd2WU13MUZOeENIeFY1Ql9IXzBCdzZrSk1OMDI4VUJUX1o0TmpCeGU4QzhjUGxFREJYMXBpeWpGSnVNeXJ6MVNHYlVjUTFEXzFES3E5M1hFQkl0TmJFSklWUzd0eF9uMXE1YWNnbUJtLUxQbmpiZ9IBuwFBVV95cUxORmthQTFkeVBkQnJjYU9ObXJDcVZlZzdWeFJMOE00UmxUX0tyLVp5aE1vemlRV25kc1JIT0lVTjk2dGFWelRjcjRQVWlPR1Z6a295NEgtckdjNHJUQk1iekk0SGozaDB3eWhDVVl5ME1vWFZhTTBTYzFyVUpRNGZ0TXh1S054eHZGSlB0aWhmOUUyd0RkT251eXhNTGZXVXJwczhFdV9nOS1rMVBLRE5FdmR0OWU4MmREWXo0?oc=5",
-   "org": "Al Jazeera",
-   "note": "",
-   "date": "02 Sep 2026"
   }
  ]
 }
