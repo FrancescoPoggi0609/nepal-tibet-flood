@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-15 01:32 UTC",
+ "generated": "2026-09-15 07:50 UTC",
  "primary": [
   {
    "title": "Rapid Mapping activation EMSR927 — Flood in Nepal",
@@ -39,25 +39,11 @@
  ],
  "secondary": [
   {
-   "title": "A week after the deadly floods in Nepal, rescuers work to find survivors",
-   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPd01naHoxejRBdWxCemR3OHpINDNiWFI2MlB4Nm1HN3BURy11cXg3U25BUlM4YXhYY3F2MGk3S0ozV2ZDSVFVQ3lZMGFfdE5EY2VfV1hlWE1NcGRJeWdhV0VOT205M0tIbFE1alhsUGRzSTlnS2tSb0I5QlhTSVdYRVVTcnBPclpYVGx6T1g5NXEyMDJMaGZWdThpaUZnZDI4OG8xdHNIWEhMWWxLSEFRM0hwMVMyQWF4Wm1UUHpjdnM0dw?oc=5",
-   "org": "NPR",
-   "note": "",
-   "date": "01 Sep 2026"
-  },
-  {
    "title": "EXCLUSIVE: How two men survived nine days in a Nepal flood tunnel",
    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQWDNVSGFNakxmWDZzWmJRVW9XQTFlNk1nYWphVld1bmtEdEM3ZU9pZ1N5cGNTcG9Db1pYVy1CLUVZQmYwczhhOEtKTlphc2JlRThwdXdlLWNNbnhZODVhTW5wYWN5OXBBSVVoMHpTNVZQTUFmS0V6Q1lWZVdTQ0JqbUxvZEQ5SUlSTGJLc2tkTDdGMENiNFZBSjlpTm4wdHdBam12VW1kTjNuMU0zN2RVSlhEeHI?oc=5",
    "org": "Reuters",
    "note": "",
    "date": "08 Sep 2026"
-  },
-  {
-   "title": "Video. Nepal flash flood: dramatic footage shows Rasuwa valley engulfed",
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPUk1OLU1DM2t4ekxteExJdzgtZW05am96OGp2Nk10elVpbUFXb2JWb3FKLWsteE1sOVZRQlZSOGYxR1VNd3A0ZnNKN1lqS0IwaWJuWEh3QnlVaGNUS2NTeEF0QzFRNzA1VnJFQi1STGp4b1ZrR0Y3WGc2bERsTlZZem1EVW5FdW9ZeWh0bHdDNzRIckNOVkt5aDV1eW50WlQxTlcxNVBPdHc?oc=5",
-   "org": "euronews.com",
-   "note": "",
-   "date": "01 Sep 2026"
   },
   {
    "title": "See China-Nepal border crossing devastated by floods",
@@ -95,11 +81,25 @@
    "date": "05 Sep 2026"
   },
   {
+   "title": "'The health system in Nepal is not prepared for this'",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeXN4YjZOZ252VzVNT21ENG9JNWxiV2t3a3lseG1ITHJCMi1OQWNxMm1SdFlVT3RmaTNGdEY5cTJ6dFNTaHF6aUlqajdCZXNzekpPaFZmZmxWYWVfVkVscnhPeEVaWlV5LTVVb3YwbklKa05tbEtDLVR0c3d3Vk9EalpoYVFGVTU5T2JoV3VONA?oc=5",
+   "org": "NPR",
+   "note": "",
+   "date": "04 Sep 2026"
+  },
+  {
    "title": "Nepal’s Big Bet on Hydropower Miscalculated One Thing—Monster Floods",
    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFAwakhudWxBN2RNclA4NE5sNDJnb0c2eFI5eUVOVWpoblNXRlNvVzdqMVNUbXE1R3lFZFUyN19EZUpqSUNvSS1vNW9wcnhrWW9yOXFMeE1vXy1reXFrRDFJQ0cyOTFWTWFDWnF1dldaMWpmZW1ib1hOWHNR?oc=5",
    "org": "WSJ",
    "note": "",
    "date": "09 Sep 2026"
+  },
+  {
+   "title": "Nepal endured months of political upheaval. Devastating floods are now testing its new government",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNTjlXM0ctblQyMnZwT29iSTBDNzdzRjJkSEU5WWotdFNEV2swbGlhdXlOQnZDQ2VKUFp0OUVnUWhfQjZpZWlBMG5tR3dlVTlua2g0dmFIcmp0REZ4S3czeXBkSlVjUmR2aUljM0R4bTBUSUZpU3FmYTg4cmNsdHo1bkRyZEVIbVg2cjlraWxISFNjVHc?oc=5",
+   "org": "AP News",
+   "note": "",
+   "date": "08 Sep 2026"
   },
   {
    "title": "China, Nepal race to find thousands still missing 12 days after floods",
@@ -111,23 +111,9 @@
   {
    "title": "Third worker rescued from Nepal tunnel, woman found alive in rubble 10 days after devastating floods",
    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE00eU5pRWl4TnhBU21VQXRYQkNXZ3IweGxPWV9GWkZ4TmNxWHpfWW5wREd6V0J6R3g2YnlwTk82ZTBqVzF5WFNhYnRnUGtxbGRqdFJ6SU5KeThOZS10cUJYMVFvQnV3cjY3MzVJRDBpaDN0M2d6?oc=5",
-   "org": "CBS News",
+   "org": "cbsnews.com",
    "note": "",
    "date": "05 Sep 2026"
-  },
-  {
-   "title": "2 people rescued alive from tunnel more than a week after deadly Nepal-Tibet flash flood",
-   "url": "https://news.google.com/rss/articles/CBMiwwlBVV95cUxNRWdDYlB1TWNpU2x2aktHMWY4ck1mTnRtNWJGX3lId1NMZVhscUxHUG03Q3Z6UFhmWVNQVjU5dnZmRjBoVGdETW4yRGtqTUVzNmdBWTVBZEtDdWFpMk5jNmJVMmJuM3E0X1FyS3FWanZyWlhELUZndWlUZ01odTdrMFRwdGpfbk1qRkk3RUd1QXZhUHJRNW80Wmt5dndSM0g3US12Q0NhbHY1ZzE5NXY2aVIwUUxjekRoZmNoQ1VqdEdlT3lmNVh2YW8yTmRwZlF6ZE1RZXdKWXlVQlRZQ2RGODlFNWRCdGJhSlIySjdLaTFlelBONGJVT2JWSktpMjZoM3Vfd21NYUpBNE04aFI5aXY5VU5fb21WYWhkRDV4NmlHWC1HTXVpVFNlaVdMSms3X3hvZEJ0ZG1vTGVWaHN1T1hSNFBvU05VV2lBMXpHUnFWTS1yTldubzJBOEw4dUg0R0FwdVM1LW45SGtoMmltb1lGbXRfbnhoZk9vMmYwMFVPekd5OHFzSzFNcWlPdF9EUUdqcmZhdzdsY3FzRmNTQzZHQktpeng2dXljV0h2U3dadnpYTWhWcU44enBMYlQwU2k2VGY2akNXWWV1WllHd3FfdWFLZ1FrQjM4UTdrcW9aSzUwQ1E0VDBza0g3djNTd3dyMHlHYUdLYl9TRTJSMEdIZmFCbVprejEtcGVNaUNBVUVudkl6ZmxGandDdXdiZzloWkhpX0xmMGpLZU9hdVQ3dXJ6X3VreXpjQ3NQQl84aUNHZ0thb1Y3YldhM2Z6ZkNhMjJDLUFSbHo3ME9KcGhtanBGNVRXV1BPZjNwU1I2T1ZvWmU4T2JYVmh1X1RCd0EzRmRueGY0RkxyUURJdklsOUZIUVZiR282RmdEYXh3OGhzMDNtWlNsVXBDRzZ0Tzg4RzhKQXVUM2FTX1gtTERRUnZ0VG9WdjZwYXlEUkNFekd2WUMwRXlheEp5Y3VNbGNxcVAxR1N0MHp1cWhHWDBCY1RaN2Rwcm1HTDZhOHZzVjZkcWF3ZWJkd2RfandDdHFXYlkycmlacDhiN0lyTEJMZDhUYzlrUm0ydm1INzNhQTRLOXltMUEwU2pXSVIzb2psSVdFdjYwaTA2WnhlTUFVYXM3ZEd1eEFRQUV0QzJwejF0bHNMM0tLVFh0RDBNTkxzeDFuVWFncGxBZGxyT0pfYWxZSXplZUNjeFpFZEstek9ISHFOM0Q0bWU4ZlQ5MlBJWVdXcVJyRHVpTFBrV2Zudy01Sng0bk5GekJHWm9TVU5QdlVsN05haUFma2pVUWFWWW1qVk0yX1ZHM0F0cnBBb3lmNnpVOS1DYjZYVDhtb0JwLUdNTkw0UjlPdWxkMWhGRk5KWUZDWUxyc3VqVXNWRGIyTF9HM3FfSlhzMHB2UXA1RW9LUFQxQUNqN2JYYmpEQUZ2LXRveEptVlhjR1lYaGR5bnRwME5hdnhDZkxBbDFNeE15clZZZ2duMnRYVlJYNUpBdzE1dmN3MGE0T2poRHhIcVZSc1dKQ00teGJOVUZaTUFiU2xBMWcyOEJpckJSM0VuV0dsRzlUNVFUemNsN1NKVmtXU19SX2tsOFExVmt2dVhsVElsSWRGY1o0aE5j?oc=5",
-   "org": "ABC7 New York",
-   "note": "",
-   "date": "04 Sep 2026"
-  },
-  {
-   "title": "Watch: Moment workers are rescued from Nepal tunnel",
-   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9fY1djMGtkN0pZYzlHRmtQSEt1bXBvM2RYcDVZdEpjVE5td2dEVi1GeU9rTEJyV0JiSmN2S0JfQmlpSlJyV3lSZTZaUkVYSHY3NklNUllJNA?oc=5",
-   "org": "BBC",
-   "note": "",
-   "date": "04 Sep 2026"
   },
   {
    "title": "Nepal: thousands still missing as flood recovery begins",
@@ -137,37 +123,16 @@
    "date": "14 Sep 2026"
   },
   {
-   "title": "‘Don’t panic’: How two men were rescued from a flood-stricken Nepali power plant",
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOLVBZV2hsQ2pMYkZQVDducExlZXZXN3A4UmJ4ZHZiVENlQ1RtTzRoYjluT3dKMkwtVVlzN3VNLUVUTUhIdGhCMldtSkIxLWFKWUxLbWJvOGx4YTNrc2tNc1EtckJNVDVXSm5uTUFJTkhCaERrWFFlbmsxc3JmNmx5anpmaXdsRDV4?oc=5",
-   "org": "CNN",
-   "note": "",
-   "date": "03 Sep 2026"
-  },
-  {
-   "title": "'The health system in Nepal is not prepared for this'",
-   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeXN4YjZOZ252VzVNT21ENG9JNWxiV2t3a3lseG1ITHJCMi1OQWNxMm1SdFlVT3RmaTNGdEY5cTJ6dFNTaHF6aUlqajdCZXNzekpPaFZmZmxWYWVfVkVscnhPeEVaWlV5LTVVb3YwbklKa05tbEtDLVR0c3d3Vk9EalpoYVFGVTU5T2JoV3VONA?oc=5",
-   "org": "NPR",
+   "title": "Watch: Moment workers are rescued from Nepal tunnel",
+   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9fY1djMGtkN0pZYzlHRmtQSEt1bXBvM2RYcDVZdEpjVE5td2dEVi1GeU9rTEJyV0JiSmN2S0JfQmlpSlJyV3lSZTZaUkVYSHY3NklNUllJNA?oc=5",
+   "org": "BBC",
    "note": "",
    "date": "04 Sep 2026"
   },
   {
-   "title": "‘Everyone seems to have forgotten’: In Tibet, flood-hit families search for the missing and grapple with China’s silence",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQb3V1Nk5YUEI2RmZ2OFhFVUVjQ25wQTVJbVNDWGJHVEY0Nlc2ek1yQm1hSkU3b3F4OW5kdVE5YThjUmdkdDJJWXgwMlVwNUl6S0k1MTBFUDZ0Z0lYN1Q5eW9vMWM2SGMwcHE5N0hGRzBfNzBsYUFwbmQ1TFd0Z0tBejZXMTNoUHZIM1AtZndISk1KeDJPU0xDTWhfREVOa2JKaVVlb3NlaVVPT2Fab3c?oc=5",
-   "org": "The Guardian",
-   "note": "",
-   "date": "03 Sep 2026"
-  },
-  {
-   "title": "More than 110 rescued a week after Nepal deadly floods, army says",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1GUnJXUzJTODNXVnVoTmN0ZC1VbXZBdzdETTZEYm5RSHRxTmlZcVRPTU15UFZzR1pnNThXUGNBYWE4OUI1UlpDSU00Q0ZXdXVtN3hwT2p2bGtlUQ?oc=5",
-   "org": "BBC",
-   "note": "",
-   "date": "01 Sep 2026"
-  },
-  {
-   "title": "Nepal: Rasuwa Flood - Flash Appeal (4 September 2026)",
-   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxORW9zMnllcXlQYU9yd3E5ajlYMlFBalF2TFNnWlMyMVdFYm92aFBDZDVZMEQ5dFRxU2hmdGdHRGg3UU01cjVQZVVWNTVadHpveFVncW1mb2ZNMXdpeVc2VTViS1NsLW94S2VqZDNXMlc5SGtpSTMtMkR3TGdRSktXcXo2Z1ZlMDlCbG13?oc=5",
-   "org": "ReliefWeb",
+   "title": "2 people rescued alive from tunnel more than a week after deadly Nepal-Tibet flash flood",
+   "url": "https://news.google.com/rss/articles/CBMiwwlBVV95cUxNRWdDYlB1TWNpU2x2aktHMWY4ck1mTnRtNWJGX3lId1NMZVhscUxHUG03Q3Z6UFhmWVNQVjU5dnZmRjBoVGdETW4yRGtqTUVzNmdBWTVBZEtDdWFpMk5jNmJVMmJuM3E0X1FyS3FWanZyWlhELUZndWlUZ01odTdrMFRwdGpfbk1qRkk3RUd1QXZhUHJRNW80Wmt5dndSM0g3US12Q0NhbHY1ZzE5NXY2aVIwUUxjekRoZmNoQ1VqdEdlT3lmNVh2YW8yTmRwZlF6ZE1RZXdKWXlVQlRZQ2RGODlFNWRCdGJhSlIySjdLaTFlelBONGJVT2JWSktpMjZoM3Vfd21NYUpBNE04aFI5aXY5VU5fb21WYWhkRDV4NmlHWC1HTXVpVFNlaVdMSms3X3hvZEJ0ZG1vTGVWaHN1T1hSNFBvU05VV2lBMXpHUnFWTS1yTldubzJBOEw4dUg0R0FwdVM1LW45SGtoMmltb1lGbXRfbnhoZk9vMmYwMFVPekd5OHFzSzFNcWlPdF9EUUdqcmZhdzdsY3FzRmNTQzZHQktpeng2dXljV0h2U3dadnpYTWhWcU44enBMYlQwU2k2VGY2akNXWWV1WllHd3FfdWFLZ1FrQjM4UTdrcW9aSzUwQ1E0VDBza0g3djNTd3dyMHlHYUdLYl9TRTJSMEdIZmFCbVprejEtcGVNaUNBVUVudkl6ZmxGandDdXdiZzloWkhpX0xmMGpLZU9hdVQ3dXJ6X3VreXpjQ3NQQl84aUNHZ0thb1Y3YldhM2Z6ZkNhMjJDLUFSbHo3ME9KcGhtanBGNVRXV1BPZjNwU1I2T1ZvWmU4T2JYVmh1X1RCd0EzRmRueGY0RkxyUURJdklsOUZIUVZiR282RmdEYXh3OGhzMDNtWlNsVXBDRzZ0Tzg4RzhKQXVUM2FTX1gtTERRUnZ0VG9WdjZwYXlEUkNFekd2WUMwRXlheEp5Y3VNbGNxcVAxR1N0MHp1cWhHWDBCY1RaN2Rwcm1HTDZhOHZzVjZkcWF3ZWJkd2RfandDdHFXYlkycmlacDhiN0lyTEJMZDhUYzlrUm0ydm1INzNhQTRLOXltMUEwU2pXSVIzb2psSVdFdjYwaTA2WnhlTUFVYXM3ZEd1eEFRQUV0QzJwejF0bHNMM0tLVFh0RDBNTkxzeDFuVWFncGxBZGxyT0pfYWxZSXplZUNjeFpFZEstek9ISHFOM0Q0bWU4ZlQ5MlBJWVdXcVJyRHVpTFBrV2Zudy01Sng0bk5GekJHWm9TVU5QdlVsN05haUFma2pVUWFWWW1qVk0yX1ZHM0F0cnBBb3lmNnpVOS1DYjZYVDhtb0JwLUdNTkw0UjlPdWxkMWhGRk5KWUZDWUxyc3VqVXNWRGIyTF9HM3FfSlhzMHB2UXA1RW9LUFQxQUNqN2JYYmpEQUZ2LXRveEptVlhjR1lYaGR5bnRwME5hdnhDZkxBbDFNeE15clZZZ2duMnRYVlJYNUpBdzE1dmN3MGE0T2poRHhIcVZSc1dKQ00teGJOVUZaTUFiU2xBMWcyOEJpckJSM0VuV0dsRzlUNVFUemNsN1NKVmtXU19SX2tsOFExVmt2dVhsVElsSWRGY1o0aE5j?oc=5",
+   "org": "ABC7 New York",
    "note": "",
    "date": "04 Sep 2026"
   },
@@ -177,6 +142,41 @@
    "org": "South China Morning Post",
    "note": "",
    "date": "08 Sep 2026"
+  },
+  {
+   "title": "‘Everyone seems to have forgotten’: In Tibet, flood-hit families search for the missing and grapple with China’s silence",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQb3V1Nk5YUEI2RmZ2OFhFVUVjQ25wQTVJbVNDWGJHVEY0Nlc2ek1yQm1hSkU3b3F4OW5kdVE5YThjUmdkdDJJWXgwMlVwNUl6S0k1MTBFUDZ0Z0lYN1Q5eW9vMWM2SGMwcHE5N0hGRzBfNzBsYUFwbmQ1TFd0Z0tBejZXMTNoUHZIM1AtZndISk1KeDJPU0xDTWhfREVOa2JKaVVlb3NlaVVPT2Fab3c?oc=5",
+   "org": "The Guardian",
+   "note": "",
+   "date": "03 Sep 2026"
+  },
+  {
+   "title": "Essay: ‘I stood and watched a place I loved vanish’",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNN2dGRk5QajlWUWVqem9lYThxMUlyOW0xVURXZ0U0Nm10dEUteGIxOEdoamxfaEszcGZ2LVUya193ay1taGZCc0ViZ3RFRzNiY1g1bFpHMng1MTU0NEtka1Z2a0l0ekY3T0Qxemg5SG1icHY1eWdnOWtQaDdmUkF4RGlRZmxacHB6S1E?oc=5",
+   "org": "CNN",
+   "note": "",
+   "date": "13 Sep 2026"
+  },
+  {
+   "title": "Nepal: Operational update on humanitarian response after devastating floods",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOTmdWRjgtaVRlSGF5OTR6ME9sbnJ1VVdEd05xd3c2T1hoQXNGWF94MlpNOGJPZjVaMmFOMFR1aFJ5dV9EV3hMZ0N2M3NpMTVFbHFfQ2lFVzJ2VHdXVnZOV0hPNHB3ZGdXZUZCMnNZb0dZUmJjSkdQdkNVN0M4dkFiZGxIQmM1aVIxZ3llMzRIakhfekJSY0hxY3V5bjVobFNEd2x6RQ?oc=5",
+   "org": "ICRC",
+   "note": "",
+   "date": "10 Sep 2026"
+  },
+  {
+   "title": "Nepal rescuers try to reach dozens trapped in tunnel after two found alive",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5hOU04VU5BODdKbGNTeFVsXzR1T2VzZFBtQms3OEZWN2VWWjJoZGdaQkk2dW94VmhPYWJweXY5SUhTd3BKeUZ3eHN0WmVpMkEwYjRWdTNIblNPZw?oc=5",
+   "org": "BBC",
+   "note": "",
+   "date": "04 Sep 2026"
+  },
+  {
+   "title": "Rescuers pull 2 trapped workers from a hydropower tunnel 9 days after Nepal floods",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTTVrY3laRmlFVDhQd0J3bmNGM0Y0bVEwTTNCUVVCcHJ4SVRSbG5RWDRoUjF1VkVCUXlWUlJYcFNqNjJnZ3JHQ1A4TFI2NzdwcFJCNWp5bDNNM2JGZUNMQmlVbXA4bFNjVnE1TE1HQW1waGpWazJiQnRPWDlnSVpJSDdTQ2EzaGozdlJVQUVfR0lsMWl0dUdPRm04Y29temM?oc=5",
+   "org": "AP News",
+   "note": "",
+   "date": "04 Sep 2026"
   }
  ]
 }
