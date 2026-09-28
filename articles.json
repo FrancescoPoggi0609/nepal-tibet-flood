@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-28 07:01 UTC",
+ "generated": "2026-09-28 15:34 UTC",
  "primary": [
   {
    "title": "Rapid Mapping activation EMSR927 — Flood in Nepal",
@@ -39,18 +39,18 @@
  ],
  "secondary": [
   {
-   "title": "If Climate Change Contributed to Nepal’s Floods, Should Polluters Pay?",
-   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQdlR2WVBuekVMV0YwX1Ruc0pwMjg1c3U3S1ZJRDVPc19rY1NwS1pZQTgyY3lmTmdmazlVN0MycjF1U1dfR3dKcHJVUGJiVjktQzU5Z2d0dkphSnRZeTNnbksyV25hZkllYk9aRGdmVmdzZWo3ckNvQnFEVU5RdTE3RzR1U2lrTmxUUEV5bkhaOEp6SjJVRlBWQkNhRGl5NC1GeTBxYjQxUW5BMzFENkdhRE45RW9iN0U?oc=5",
-   "org": "National Geographic",
-   "note": "",
-   "date": "16 Sep 2026"
-  },
-  {
    "title": "Inside Nepal's hidden tunnel networks that became death traps",
    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5QMEh5X0k2cW1uUnpUcnN0UnFUdDdBS3NDVzRpWlVtYi1Bd0pDRXBNeGNXbnZOSzQ5UlVOMDRxUlVrOEJWQUtvSGN4VDU4T3FVLTFvTkRTTTBXcHE0N3p6UGUxTjJzVk5fLUlvZnZiTm1takVMZEF1dw?oc=5",
    "org": "Reuters",
    "note": "",
    "date": "21 Sep 2026"
+  },
+  {
+   "title": "If Climate Change Contributed to Nepal’s Floods, Should Polluters Pay?",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQdlR2WVBuekVMV0YwX1Ruc0pwMjg1c3U3S1ZJRDVPc19rY1NwS1pZQTgyY3lmTmdmazlVN0MycjF1U1dfR3dKcHJVUGJiVjktQzU5Z2d0dkphSnRZeTNnbksyV25hZkllYk9aRGdmVmdzZWo3ckNvQnFEVU5RdTE3RzR1U2lrTmxUUEV5bkhaOEp6SjJVRlBWQkNhRGl5NC1GeTBxYjQxUW5BMzFENkdhRE45RW9iN0U?oc=5",
+   "org": "National Geographic",
+   "note": "",
+   "date": "16 Sep 2026"
   },
   {
    "title": "A month after Nepal-China floods, families await answers about more than 50 missing Ukrainians",
@@ -62,7 +62,7 @@
   {
    "title": "Is Nepal's flood a harbinger of what's to come in the Himalayas?",
    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPM1N1VGYySllyOFZkTUVNUVJDLVRlaHZIaUk4VW0wYl9uSDRhOUVHUW1LVDd3N0hvUFR2cHNZZGdHSm9EZm44elpraExZQXJqa3lZT3VVY1RhNWJSSDZjbi12cGFOMFpBWU1OU0ZsUGxzVkVNaXRMSERaMmRSOWlmRXJLMmZNT1Z0aDlGWDc1enNpbzhxS3duc0N2WjlHUQ?oc=5",
-   "org": "ctpublic.org",
+   "org": "Connecticut Public",
    "note": "",
    "date": "23 Sep 2026"
   },
@@ -76,7 +76,7 @@
   {
    "title": "Rapid Warming in the Himalaya Exacerbates Geohazard Cascades Beyond Adaptation Limits",
    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOTFlLNnppaVdhQThlZEdZemJCRHBwWUF2ZkV1LUV1YlZ6bVZubTY1ZGpVUEg0VFNpcjVuTVBzM0RjQkhmc1hJOTAyc0RlWUZoSm5pMDdYT3RnZDhiWWo2amd2RTRFaDBzSWRjTXBjUkZFTm1MWFZIb0Z1a1djX3ZMcDZMUjdGNGVzT1JGY1Bub3JONVpNbGhNZ1BKalFhcTZoWF9zUTNVVmJBbjA0LUMyT2pPc0hoaUhOWS1DYUd4MVN4eVlD?oc=5",
-   "org": "worldweatherattribution.org",
+   "org": "World Weather Attribution",
    "note": "",
    "date": "17 Sep 2026"
   },
@@ -97,7 +97,7 @@
   {
    "title": "Thousands missing, aid needs mount one month after Nepal's deadly floods",
    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQbEI0NEpidVdoLXBMRU9LSFFvM3czT2FvcXd0SWl1REFHZTdkaFdJV2hmdGZRNnViWTJGUHBRd2hMQnRrbVNKM29YdEpHdm9MTDRwM0k4QmhrNmI3QktWWFBJTzczWkVGNWdnbUpNVnBQNzFjWEdyRldLRUFoMC1PZldoTDh3LURITXJKV2pmbGVsenBFVHZ3LWZIV3J6M19FWEpUY2lQRFV4N2FEQVYzQmVVcnc1TTRrZnc?oc=5",
-   "org": "France 24",
+   "org": "france24.com",
    "note": "",
    "date": "24 Sep 2026"
   },
@@ -114,13 +114,6 @@
    "org": "DW.com",
    "note": "",
    "date": "25 Sep 2026"
-  },
-  {
-   "title": "Manipulated clip of Nepal-Tibet border misleads online weeks after deadly floods",
-   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9KNU5KN2NFa1VhSzl3Z1lybzVnY0stSUJkSEdPcl9PNkUwbFBCb3h3eUFQNjN3NXVISjRSb1R1amV1eWJ5cmhhOGJuZmxpRmkwM0RtLWhBUjc?oc=5",
-   "org": "AFP Fact Check",
-   "note": "",
-   "date": "22 Sep 2026"
   },
   {
    "title": "More Than 1,400 People Have Died in Nepal’s Catastrophic Floods—Here’s How Travelers Can Help",
@@ -151,13 +144,6 @@
    "date": "26 Sep 2026"
   },
   {
-   "title": "Scale of Flood Disaster Grows as Nepal Says 2,400 Are Missing",
-   "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNN3l4UVlpXzdmMVRMMTVBb3pJdzJBMlhiSW5pT0hndlMyOWZBR2x1WDJMekxGZVpNUDN1dTd2dE5mMWxwNm1lZzg2Rndpd2xhS0VUN1NmSDUtQ3JtZWkwREZNUlgyM3NPM2RZVmlXb3czR1FvZG9pNUwyajlnY0JYQW1pOXNuczdaM2hCQmRORXZCSVB5emZmam5xMG1zcDN2R3M0XzRoUVBBcW8zdjNfQ1A5SXpKTHJqLVFvbnI2TDhhUi1ocXI3dFR1c2FIQTFHWFJBVVE0dlRDTnhjSzJ2NTNJM3EtT1ZtQ1hGcTZR?oc=5",
-   "org": "Springfield News-Sun",
-   "note": "",
-   "date": "21 Sep 2026"
-  },
-  {
    "title": "NorCal couple missing a month after catastrophic flooding in Nepal",
    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcnVGOWFuaWpIRnZFMlFfQ3E1Vk9tektQYl9tamt1VFhBNDV5cVZHeWQycElDT3FuX2ZuaVhsNWZPQ3d0OXpNaGJxVTBLV2xNWkNJUkttbHhMVE03cUpRMU04ak9rNWNsLXFETEthMHdacmdFWGNRWFc3eGZWTVR4LS1iejhEY1pnTVh2bjE3Y1YwbHR0ZFUzeVVjRzFFTUVkT1Vz?oc=5",
    "org": "sfgate.com",
@@ -175,6 +161,20 @@
    "title": "Flood-battered Nepal kicks off festival season with weeklong Indra Jatra as more rain is predicted",
    "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxObkFKMHplV1BnZ2RvM1BFa1J6OFh4SkpKc1ZxNXNWWWJpX19IWXNBMExnT0VhbWZrNFYteTl2cFBBNGNZTC1NTGVCZEpjQmt4QVFWZ3llZko1c1JwSWtCY0R5aXdSTk93R0xUQVgxSVd3bjJuU0M5ZldXTG5oRlhjcGpvaVRJSmhab3h5SEFsVjl3Wm1mZWV3ekpCdlZWYnhNZ0hJOXFid3M5Wk1TY1lrSlBRaWlURHp5V2FqaWNjZUNhbFJneDZ3V0FoVjB4RldfWjlfX183bE9UbDJKYUEySjZrd3FROHdKcGR0eWVvaWdMYzRpTmp3UEIwVjB0V0NESloxVmJUbHVGcEpuRFd0TXpISDhmU0k?oc=5",
    "org": "Ottumwa Courier",
+   "note": "",
+   "date": "25 Sep 2026"
+  },
+  {
+   "title": "At least 33 Britons still missing one month after Nepal flash floods disaster",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNNjlNRjZCVV9feU9NX05iblIzbGQ2cXA4N0toVFBhcUp2TzNwTWpUc2ktdFdvUFp5TU1GNVJuLVVZSkVyVTJYYnFvVl8tSEJhZGJtRjdZWGhCV2FXYVdJS2dOX1Fabl9PVnNDRkpNbGphUWlJQTNsYk4yeDdfdXVVWThTUldNUmJrcVpiM2JmVG1NNzlUdFhlNnBuOHdESlE?oc=5",
+   "org": "The Independent",
+   "note": "",
+   "date": "27 Sep 2026"
+  },
+  {
+   "title": "Frontline Update: Reporting Nepal’s Flood Crisis",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB0a250YUYyY1lidm5sQzhSMEREcXE0Uzh6VGJVa3l2SkNuZlZLR25JV1J3b2tTLUhxY2F1eHN4TmRST0FkWF8wS3BYUEd6dklySF9lbUpGb0NqMW1JWTZ4ckNIakM1aTc3bnNYWg?oc=5",
+   "org": "Institute for War & Peace Reporting - IWPR",
    "note": "",
    "date": "25 Sep 2026"
   }
